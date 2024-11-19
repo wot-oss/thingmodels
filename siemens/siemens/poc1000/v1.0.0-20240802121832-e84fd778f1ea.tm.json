@@ -1,0 +1,5896 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "schema": "https://schema.org/",
+      "om": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+      "cpcom": "http://siemens.com/wot/2024/electricalproducts/cp-com#"
+    }
+  ],
+  "@type": "tm:ThingModel",
+  "version": {
+    "model": "1.0.0",
+    "baseline": "3.0"
+  },
+  "title": "POC1000",
+  "id": "siemens/siemens/poc1000/v1.0.0-20240802121832-e84fd778f1ea.tm.json",
+  "Description": "Please update Powercenter and underlying devices to actual version!",
+  "base": "modbus://{{IP}}:{{PORT}}",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": "nosec_sc",
+  "schema:license": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+  "schema:copyrightYear": 2024,
+  "schema:copyrightHolder": {
+    "@type": "Organization",
+    "name": "Siemens"
+  },
+  "schema:author": {
+    "schema:name": "Siemens"
+  },
+  "schema:manufacturer": {
+    "schema:name": "Siemens"
+  },
+  "schema:mpn": "POC1000",
+  "properties": {
+    "IDENT_IM0_MANUFACTURER_ID": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 2,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 2,
+      "title": "Manufacturer ID",
+      "titles": {
+        "en-US": "Manufacturer ID",
+        "de-DE": "Hersteller ID",
+        "fr": "ID fabricant"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 42
+    },
+    "IDENT_IM0_ORDER_ID": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 10,
+          "modbus:address": 3,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 3,
+      "title": "Order Number",
+      "titles": {
+        "en-US": "Order Number",
+        "de-DE": "Bestellnummer",
+        "fr": "Numéro de référence"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string"
+    },
+    "IDENT_IM0_SERIAL_NUMBER": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 8,
+          "modbus:address": 13,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 4,
+      "title": "Serial Number",
+      "titles": {
+        "en-US": "Serial Number",
+        "de-DE": "Seriennummer",
+        "fr": "Numéro de série"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string"
+    },
+    "IDENT_IM0_HARDWARE_REVISION": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 21,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5,
+      "title": "Hardware Revision",
+      "titles": {
+        "en-US": "Hardware Revision",
+        "de-DE": "Hardware Version",
+        "fr": "Révision du matériel"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_IM0_SOFTWARE_REVISION": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 22,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 6,
+      "title": "Software Revision",
+      "titles": {
+        "en-US": "Software Revision",
+        "de-DE": "Software Version",
+        "fr": "Révision du logiciel"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0"
+    },
+    "IDENT_IM0_REVISION_COUNTER": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 24,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 7,
+      "title": "Revision Counter",
+      "titles": {
+        "en-US": "Revision Counter",
+        "de-DE": "Revision Zähler",
+        "fr": "Compteur de révisions"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_IM0_PROFILE_ID": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 25,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 8,
+      "title": "Profibus Profile",
+      "titles": {
+        "en-US": "Profibus Profile",
+        "de-DE": "Profibus Profile",
+        "fr": "Profil PROFIBUS"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 62976,
+      "max": 63231,
+      "default": 62976
+    },
+    "IDENT_IM0_PROFILE_SPECIFIC_TYPE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 26,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 9,
+      "title": "Profibus Profile Type",
+      "titles": {
+        "en-US": "Profibus Profile Type",
+        "de-DE": "Profibus Profile Type",
+        "fr": "Type de profil PROFIBUS"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_IM0_VERSION": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 27,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 10,
+      "title": "IM0 Version",
+      "titles": {
+        "en-US": "IM0 Version",
+        "de-DE": "IM0 Version",
+        "fr": "Version IM0"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "min": "1.0",
+      "max": "255255",
+      "default": "0x101"
+    },
+    "IDENT_IM0_SUPPORTED": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 28,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 11,
+      "title": "Supported IM Profiles",
+      "titles": {
+        "en-US": "Supported IM Profiles",
+        "de-DE": "Unterstützte IM Profile",
+        "fr": "Profils IM pris en charge"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 6
+    },
+    "IDENT_IM1_FUNCTION": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 16,
+          "modbus:address": 29,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 12,
+      "title": "Plant Identifier",
+      "titles": {
+        "en-US": "Plant Identifier",
+        "de-DE": "Anlagenkennzeichen",
+        "fr": "Repère de l'installation"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string"
+    },
+    "IDENT_IM1_LOCATION": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 11,
+          "modbus:address": 45,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 13,
+      "title": "Location Identifier",
+      "titles": {
+        "en-US": "Location Identifier",
+        "de-DE": "Einbauort",
+        "fr": "Repère de l'emplacement"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string"
+    },
+    "IDENT_IM2_INSTALLATION_DATE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 8,
+          "modbus:address": 56,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 14,
+      "title": "Installation Date",
+      "titles": {
+        "en-US": "Installation Date",
+        "de-DE": "Installationsdatum",
+        "fr": "Date de l'installation"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string"
+    },
+    "IDENT_FW_APP_BOT": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 5,
+          "modbus:address": 64,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 15,
+      "title": "FW Version Application Controller Bootloader",
+      "titles": {
+        "en-US": "FW Version Application Controller Bootloader",
+        "de-DE": "FW Version Application Controller Bootloader",
+        "fr": "Version FW du chargeur d'amorçage du contrôleur d'application"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0"
+    },
+    "IDENT_FW_APP": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 5,
+          "modbus:address": 69,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 16,
+      "title": "FW Version Application Controller",
+      "titles": {
+        "en-US": "FW Version Application Controller",
+        "de-DE": "FW Version Application Controller",
+        "fr": "Version FW du contrôleur d'application"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0"
+    },
+    "IDENT_FW_COM_BOT": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 5,
+          "modbus:address": 74,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 17,
+      "title": "FW Version Communication Controller Bootloader",
+      "titles": {
+        "en-US": "FW Version Communication Controller Bootloader",
+        "de-DE": "FW Version Communication Controller Bootloader",
+        "fr": "Version FW du chargeur d'amorçage du contrôleur de communication"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0"
+    },
+    "IDENT_FW_COM": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 5,
+          "modbus:address": 79,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 18,
+      "title": "FW Version Communication Controller",
+      "titles": {
+        "en-US": "FW Version Communication Controller",
+        "de-DE": "FW Version Communication Controller",
+        "fr": "Version FW du contrôleur de communication"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0"
+    },
+    "IDENT_BLE_STACK_VERSION_INFO": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 6,
+          "modbus:address": 84,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 19,
+      "title": "BLE Stack Version",
+      "titles": {
+        "en-US": "BLE Stack Version",
+        "de-DE": "BLE Stack Version",
+        "fr": "Version pile BLE"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0"
+    },
+    "IDENT_ZIGBEE_STACK_VERSION_INFO": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 90,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 20,
+      "title": "Radio Stack Version",
+      "titles": {
+        "en-US": "Radio Stack Version",
+        "de-DE": "Funk Stack Version",
+        "fr": "Version de la pile radio"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0"
+    },
+    "IDENT_DEVICE_MARKET": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 94,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 21,
+      "title": "Target Market ",
+      "titles": {
+        "en-US": "Target Market ",
+        "de-DE": "Zielmarkt",
+        "fr": "Marché cible "
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 1,
+      "max": 3,
+      "default": 1
+    },
+    "IDENT_SET_BLINKING": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 97,
+          "modbus:type": "integer",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:function": "writeSingleHoldingRegister"
+        }
+      ],
+      "cpcom:id": 24,
+      "title": "Blinking Mode",
+      "titles": {
+        "en-US": "Blinking Mode",
+        "de-DE": "Blinkmodus",
+        "fr": "Mode clignotant"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "integer",
+      "min": 0,
+      "max": 1,
+      "default": 0
+    },
+    "IDENT_HW_APCB_VERSION": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 109,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 27,
+      "title": "Hardware Revision",
+      "titles": {
+        "en-US": "Hardware Revision",
+        "de-DE": "Hardware Ausgabestand",
+        "fr": "Révision du matériel"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 10,
+      "default": 0
+    },
+    "PARAM_MAC_ADDRESS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 3,
+          "modbus:address": 512,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 512,
+      "title": "Ethernet MAC Address",
+      "titles": {
+        "en-US": "Ethernet MAC Address",
+        "de-DE": "Ethernet MAC Adresse",
+        "fr": "Adresse MAC Ethernet"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string"
+    },
+    "PARAM_DHCP": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 515,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 513,
+      "title": "DHCP on/off",
+      "titles": {
+        "en-US": "DHCP on/off",
+        "de-DE": "DHCP ein/aus",
+        "fr": "DHCP ON/OFF"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 1,
+      "default": 1
+    },
+    "PARAM_SNTP_IP": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 517,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 514,
+      "title": "SNTP Server IP-Address",
+      "titles": {
+        "en-US": "SNTP Server IP-Address",
+        "de-DE": "SNTP Server IP-Adresse",
+        "fr": "Adresse IP du serveur SNTP"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 4294967295,
+      "default": 0
+    },
+    "PARAM_SNTP_MODE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 519,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 515,
+      "title": "SNTP Client Mode",
+      "titles": {
+        "en-US": "SNTP Client Mode",
+        "de-DE": "SNTP Client Mode",
+        "fr": "Mode Client SNTP"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 2,
+      "default": 0
+    },
+    "PARAM_IP_FIREWALL": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 521,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 516,
+      "title": "Firewall on/off",
+      "titles": {
+        "en-US": "Firewall on/off",
+        "de-DE": "Firewall ein/aus",
+        "fr": "Pare-feu activé/désactivé"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 1,
+      "default": 0
+    },
+    "PARAM_IP_PORT_NUMBER": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 523,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 517,
+      "title": "IP Port Number",
+      "titles": {
+        "en-US": "IP Port Number",
+        "de-DE": "IP Port Nummer ",
+        "fr": "Numéro du port IP"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 502
+    },
+    "PARAM_STATIC_IP_ADDRESS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 525,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 518,
+      "title": "Static IP-Address",
+      "titles": {
+        "en-US": "Static IP-Address",
+        "de-DE": "Statische IP-Adresse",
+        "fr": "Adresse statique IP"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 4294967295,
+      "default": 0
+    },
+    "PARAM_STATIC_SUBNETMASK": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 527,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 519,
+      "title": "Static Subnet Mask",
+      "titles": {
+        "en-US": "Static Subnet Mask",
+        "de-DE": "Statische Subnetzmaske",
+        "fr": "Masque statique de sous-réseau"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 4294967295,
+      "default": 0
+    },
+    "PARAM_STATIC_GATEWAY": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 529,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 520,
+      "title": "Static Gateway",
+      "titles": {
+        "en-US": "Static Gateway",
+        "de-DE": "Statisches Gateway",
+        "fr": "Passerelle statique"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 4294967295,
+      "default": 0
+    },
+    "RESERVED1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 531,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 521,
+      "title": "reserved",
+      "titles": {
+        "en-US": "reserved",
+        "de-DE": "reserved; compatibility with PAC3200",
+        "fr": "réservé"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 4294967295
+    },
+    "RESERVED2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 533,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 522,
+      "title": "reserved",
+      "titles": {
+        "en-US": "reserved",
+        "de-DE": "reserved; compatibility with PAC3200",
+        "fr": "réservé"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 4294967295
+    },
+    "RESERVED3": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 535,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 523,
+      "title": "reserved",
+      "titles": {
+        "en-US": "reserved",
+        "de-DE": "reserved; compatibility with PAC3200",
+        "fr": "réservé"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 4294967295
+    },
+    "RESERVED4": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 537,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 524,
+      "title": "reserved",
+      "titles": {
+        "en-US": "reserved",
+        "de-DE": "reserved; compatibility with PAC3200",
+        "fr": "réservé"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 4294967295
+    },
+    "RESERVED5": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 120,
+          "modbus:address": 539,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 525,
+      "title": "reserved",
+      "titles": {
+        "en-US": "reserved",
+        "de-DE": "reserved; compatibility with PAC3200",
+        "fr": "réservé"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0xFFFFFFFF"
+    },
+    "RESERVED6": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 8,
+          "modbus:address": 659,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 526,
+      "title": "reserved",
+      "titles": {
+        "en-US": "reserved",
+        "de-DE": "reserved; compatibility with PAC3200",
+        "fr": "réservé"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0xFFFFFFFF"
+    },
+    "RESERVED7": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 667,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 527,
+      "title": "reserved",
+      "titles": {
+        "en-US": "reserved",
+        "de-DE": "reserved; compatibility with PAC3200",
+        "fr": "réservé"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 4294967295
+    },
+    "PARAM_IP_ADDRESS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 669,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 528,
+      "title": "IP-Address",
+      "titles": {
+        "en-US": "IP-Address",
+        "de-DE": "IP-Adresse",
+        "fr": "Adresse IP"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "PARAM_SUBNETMASK": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 671,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 529,
+      "title": "Subnet Mask",
+      "titles": {
+        "en-US": "Subnet Mask",
+        "de-DE": "Subnetzmaske",
+        "fr": "Masque de sous-réseau"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "PARAM_GATEWAY": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 673,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 530,
+      "title": "Gateway Address",
+      "titles": {
+        "en-US": "Gateway Address",
+        "de-DE": "Gateway Adresse",
+        "fr": "Adresse de la passerelle"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "PARAM_ACTIVATE_IP_SETTINGS": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 675,
+          "modbus:type": "integer",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:function": "writeSingleHoldingRegister"
+        }
+      ],
+      "cpcom:id": 531,
+      "title": "Activate IP-configuration",
+      "titles": {
+        "en-US": "Activate IP-configuration",
+        "de-DE": "Aktivierung IP-Konfiguration",
+        "fr": "Activer configuration IP"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "integer",
+      "min": 0,
+      "max": 0
+    },
+    "CMD_BLE_FUNCTION_CTRL": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 768,
+          "modbus:type": "integer",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:function": "writeSingleHoldingRegister"
+        }
+      ],
+      "cpcom:id": 768,
+      "title": "Bluetooth Control\n",
+      "titles": {
+        "en-US": "Bluetooth Control\n",
+        "de-DE": "Bluetooth Steuerung",
+        "fr": "Commande Bluetooth\n"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "integer",
+      "min": 1,
+      "max": 3
+    },
+    "IDENT_BLE_FUNCTION_STATUS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 769,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 769,
+      "title": "Bluetooth State",
+      "titles": {
+        "en-US": "Bluetooth State",
+        "de-DE": "Bluetooth Status",
+        "fr": "État Bluetooth"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "PARAM_BLE_TX_POWER_LEVEL": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 770,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 770,
+      "title": "Bluetooth TX Power Level",
+      "titles": {
+        "en-US": "Bluetooth TX Power Level",
+        "de-DE": "Bluetooth Sendeleistung",
+        "fr": "Niveau de puissance TX Bluetooth"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "unit": "dBm",
+      "min": -18,
+      "max": 4,
+      "default": 2
+    },
+    "IDENT_BLE_DEVICE_ADDRESS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 3,
+          "modbus:address": 771,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 771,
+      "title": "Bluetooth Device Address",
+      "titles": {
+        "en-US": "Bluetooth Device Address",
+        "de-DE": "Bluetooth Geräteadresse",
+        "fr": "Adresse appareil Bluetooth"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0"
+    },
+    "PARAM_BLE_PASSKEY": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 774,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 772,
+      "title": "Bluetooth Passkey",
+      "titles": {
+        "en-US": "Bluetooth Passkey",
+        "de-DE": "Bluetooth Passkey",
+        "fr": "Clé Bluetooth"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 999999,
+      "default": 0
+    },
+    "PARAM_DATE_TIME": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 1024,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1024,
+      "title": "Date/Time",
+      "titles": {
+        "en-US": "Date/Time",
+        "de-DE": "Datum/Zeit",
+        "fr": "Date/heure"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 4294967295,
+      "default": 946684800
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1026,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1025,
+      "title": "Pairing Status (1)",
+      "titles": {
+        "en-US": "Pairing Status (1)",
+        "de-DE": "Pairing Status (1)",
+        "fr": "État d'appairage (1)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1027,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1026,
+      "title": "Pairing Status (2)",
+      "titles": {
+        "en-US": "Pairing Status (2)",
+        "de-DE": "Pairing Status (2)",
+        "fr": "État d'appairage (2)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID3": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1028,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1027,
+      "title": "Pairing Status (3)",
+      "titles": {
+        "en-US": "Pairing Status (3)",
+        "de-DE": "Pairing Status (3)",
+        "fr": "État d'appairage (3)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID4": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1029,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1028,
+      "title": "Pairing Status (4)",
+      "titles": {
+        "en-US": "Pairing Status (4)",
+        "de-DE": "Pairing Status (4)",
+        "fr": "État d'appairage (4)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID5": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1030,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1029,
+      "title": "Pairing Status (5)",
+      "titles": {
+        "en-US": "Pairing Status (5)",
+        "de-DE": "Pairing Status (5)",
+        "fr": "État d'appairage (5)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID6": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1031,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1030,
+      "title": "Pairing Status (6)",
+      "titles": {
+        "en-US": "Pairing Status (6)",
+        "de-DE": "Pairing Status (6)",
+        "fr": "État d'appairage (6)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID7": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1032,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1031,
+      "title": "Pairing Status (7)",
+      "titles": {
+        "en-US": "Pairing Status (7)",
+        "de-DE": "Pairing Status (7)",
+        "fr": "État d'appairage (7)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID8": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1033,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1032,
+      "title": "Pairing Status (8)",
+      "titles": {
+        "en-US": "Pairing Status (8)",
+        "de-DE": "Pairing Status (8)",
+        "fr": "État d'appairage (8)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID9": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1034,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1033,
+      "title": "Pairing Status (9)",
+      "titles": {
+        "en-US": "Pairing Status (9)",
+        "de-DE": "Pairing Status (9)",
+        "fr": "État d'appairage (9)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID10": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1035,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1034,
+      "title": "Pairing Status (10)",
+      "titles": {
+        "en-US": "Pairing Status (10)",
+        "de-DE": "Pairing Status (10)",
+        "fr": "État d'appairage (10)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID11": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1036,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1035,
+      "title": "Pairing Status (11)",
+      "titles": {
+        "en-US": "Pairing Status (11)",
+        "de-DE": "Pairing Status (11)",
+        "fr": "État d'appairage (11)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID12": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1037,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1036,
+      "title": "Pairing Status (12)",
+      "titles": {
+        "en-US": "Pairing Status (12)",
+        "de-DE": "Pairing Status (12)",
+        "fr": "État d'appairage (12)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID13": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1038,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1037,
+      "title": "Pairing Status (13)",
+      "titles": {
+        "en-US": "Pairing Status (13)",
+        "de-DE": "Pairing Status (13)",
+        "fr": "État d'appairage (13)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID14": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1039,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1038,
+      "title": "Pairing Status (14)",
+      "titles": {
+        "en-US": "Pairing Status (14)",
+        "de-DE": "Pairing Status (14)",
+        "fr": "État d'appairage (14)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID15": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1040,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1039,
+      "title": "Pairing Status (15)",
+      "titles": {
+        "en-US": "Pairing Status (15)",
+        "de-DE": "Pairing Status (15)",
+        "fr": "État d'appairage (15)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID16": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1041,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1040,
+      "title": "Pairing Status (16)",
+      "titles": {
+        "en-US": "Pairing Status (16)",
+        "de-DE": "Pairing Status (16)",
+        "fr": "État d'appairage (16)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID17": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1042,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1041,
+      "title": "Pairing Status (17)",
+      "titles": {
+        "en-US": "Pairing Status (17)",
+        "de-DE": "Pairing Status (17)",
+        "fr": "État d'appairage (17)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID18": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1043,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1042,
+      "title": "Pairing Status (18)",
+      "titles": {
+        "en-US": "Pairing Status (18)",
+        "de-DE": "Pairing Status (18)",
+        "fr": "État d'appairage (18)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID19": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1044,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1043,
+      "title": "Pairing Status (19)",
+      "titles": {
+        "en-US": "Pairing Status (19)",
+        "de-DE": "Pairing Status (19)",
+        "fr": "État d'appairage (19)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID20": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1045,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1044,
+      "title": "Pairing Status (20)",
+      "titles": {
+        "en-US": "Pairing Status (20)",
+        "de-DE": "Pairing Status (20)",
+        "fr": "État d'appairage (20)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID21": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1046,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1045,
+      "title": "Pairing Status (21)",
+      "titles": {
+        "en-US": "Pairing Status (21)",
+        "de-DE": "Pairing Status (21)",
+        "fr": "État d'appairage (21)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID22": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1047,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1046,
+      "title": "Pairing Status (22)",
+      "titles": {
+        "en-US": "Pairing Status (22)",
+        "de-DE": "Pairing Status (22)",
+        "fr": "État d'appairage (22)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID23": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1048,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1047,
+      "title": "Pairing Status (23)",
+      "titles": {
+        "en-US": "Pairing Status (23)",
+        "de-DE": "Pairing Status (23)",
+        "fr": "État d'appairage (23)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_PAIRING_STATUS_UNIT_ID24": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1049,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1048,
+      "title": "Pairing Status (24)",
+      "titles": {
+        "en-US": "Pairing Status (24)",
+        "de-DE": "Pairing Status (24)",
+        "fr": "État d'appairage (24)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "PARAM_ZIGBEE_TX_POWER_LEVEL": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1050,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1049,
+      "title": "Radio TX Power Level",
+      "titles": {
+        "en-US": "Radio TX Power Level",
+        "de-DE": "Funk Sendeleistung",
+        "fr": "Niveau puissance radio TX"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "unit": "dBm",
+      "min": -18,
+      "max": 2,
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1051,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1050,
+      "title": "Device Status (1)",
+      "titles": {
+        "en-US": "Device Status (1)",
+        "de-DE": "Device Status (1)",
+        "fr": "État appareil (1)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1052,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1051,
+      "title": "Device Status (2)",
+      "titles": {
+        "en-US": "Device Status (2)",
+        "de-DE": "Device Status (2)",
+        "fr": "État appareil (2)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID3": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1053,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1052,
+      "title": "Device Status (3)",
+      "titles": {
+        "en-US": "Device Status (3)",
+        "de-DE": "Device Status (3)",
+        "fr": "État appareil (3)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID4": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1054,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1053,
+      "title": "Device Status (4)",
+      "titles": {
+        "en-US": "Device Status (4)",
+        "de-DE": "Device Status (4)",
+        "fr": "État appareil (4)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID5": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1055,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1054,
+      "title": "Device Status (5)",
+      "titles": {
+        "en-US": "Device Status (5)",
+        "de-DE": "Device Status (5)",
+        "fr": "État appareil (5)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID6": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1056,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1055,
+      "title": "Device Status (6)",
+      "titles": {
+        "en-US": "Device Status (6)",
+        "de-DE": "Device Status (6)",
+        "fr": "État appareil (6)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID7": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1057,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1056,
+      "title": "Device Status (7)",
+      "titles": {
+        "en-US": "Device Status (7)",
+        "de-DE": "Device Status (7)",
+        "fr": "État appareil (7)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID8": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1058,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1057,
+      "title": "Device Status (8)",
+      "titles": {
+        "en-US": "Device Status (8)",
+        "de-DE": "Device Status (8)",
+        "fr": "État appareil (8)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID9": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1059,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1058,
+      "title": "Device Status (9)",
+      "titles": {
+        "en-US": "Device Status (9)",
+        "de-DE": "Device Status (9)",
+        "fr": "État appareil (9)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID10": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1060,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1059,
+      "title": "Device Status (10)",
+      "titles": {
+        "en-US": "Device Status (10)",
+        "de-DE": "Device Status (10)",
+        "fr": "État appareil (10)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID11": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1061,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1060,
+      "title": "Device Status (11)",
+      "titles": {
+        "en-US": "Device Status (11)",
+        "de-DE": "Device Status (11)",
+        "fr": "État appareil (11)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID12": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1062,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1061,
+      "title": "Device Status (12)",
+      "titles": {
+        "en-US": "Device Status (12)",
+        "de-DE": "Device Status (12)",
+        "fr": "État appareil (12)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID13": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1063,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1062,
+      "title": "Device Status (13)",
+      "titles": {
+        "en-US": "Device Status (13)",
+        "de-DE": "Device Status (13)",
+        "fr": "État appareil (13)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID14": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1064,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1063,
+      "title": "Device Status (14)",
+      "titles": {
+        "en-US": "Device Status (14)",
+        "de-DE": "Device Status (14)",
+        "fr": "État appareil (14)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID15": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1065,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1064,
+      "title": "Device Status (15)",
+      "titles": {
+        "en-US": "Device Status (15)",
+        "de-DE": "Device Status (15)",
+        "fr": "État appareil (15)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID16": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1066,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1065,
+      "title": "Device Status (16)",
+      "titles": {
+        "en-US": "Device Status (16)",
+        "de-DE": "Device Status (16)",
+        "fr": "État appareil (16)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID17": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1067,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1066,
+      "title": "Device Status (17)",
+      "titles": {
+        "en-US": "Device Status (17)",
+        "de-DE": "Device Status (17)",
+        "fr": "État appareil (17)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID18": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1068,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1067,
+      "title": "Device Status (18)",
+      "titles": {
+        "en-US": "Device Status (18)",
+        "de-DE": "Device Status (18)",
+        "fr": "État appareil (18)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID19": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1069,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1068,
+      "title": "Device Status (19)",
+      "titles": {
+        "en-US": "Device Status (19)",
+        "de-DE": "Device Status (19)",
+        "fr": "État appareil (19)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID20": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1070,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1069,
+      "title": "Device Status (20)",
+      "titles": {
+        "en-US": "Device Status (20)",
+        "de-DE": "Device Status (20)",
+        "fr": "État appareil (20)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID21": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1071,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1070,
+      "title": "Device Status (21)",
+      "titles": {
+        "en-US": "Device Status (21)",
+        "de-DE": "Device Status (21)",
+        "fr": "État appareil (21)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID22": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1072,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1071,
+      "title": "Device Status (22)",
+      "titles": {
+        "en-US": "Device Status (22)",
+        "de-DE": "Device Status (22)",
+        "fr": "État appareil (22)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID23": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1073,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1072,
+      "title": "Device Status (23)",
+      "titles": {
+        "en-US": "Device Status (23)",
+        "de-DE": "Device Status (23)",
+        "fr": "État appareil (23)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_DEVICE_STATUS_UNIT_ID24": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1074,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1073,
+      "title": "Device Status (24)",
+      "titles": {
+        "en-US": "Device Status (24)",
+        "de-DE": "Device Status (24)",
+        "fr": "État appareil (24)"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1100,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1099,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1101,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1100,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID3": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1102,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1101,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID4": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1103,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1102,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID5": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1104,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1103,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID6": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1105,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1104,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID7": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1106,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1105,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID8": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1107,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1106,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID9": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1108,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1107,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID10": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1109,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1108,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID11": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1110,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1109,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID12": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1111,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1110,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID13": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1112,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1111,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID14": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1113,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1112,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID15": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1114,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1113,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID16": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1115,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1114,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID17": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1116,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1115,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID18": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1117,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1116,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID19": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1118,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1117,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID20": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1119,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1118,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID21": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1120,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1119,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID22": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1121,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1120,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID23": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1122,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1121,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID24": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1123,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1122,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAMETER_CHANGE_COUNTER_UNIT_ID255": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1124,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1123,
+      "title": "Parameter last upate count",
+      "titles": {
+        "en-US": "Parameter last upate count",
+        "de-DE": "Datenpunkt Aktualisierungszähler",
+        "fr": "Dernier nombre de mises à jour du paramètre"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID1": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1536,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1536,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1545,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1537,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID2": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1549,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1538,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1558,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1539,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID3": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1562,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1540,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID3": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1571,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1541,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID4": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1575,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1542,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID4": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1584,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1543,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID5": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1588,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1544,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID5": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1597,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1545,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID6": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1601,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1546,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID6": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1610,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1547,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID7": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1614,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1548,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID7": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1623,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1549,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID8": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1627,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1550,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID8": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1636,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1551,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID9": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1640,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1552,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID9": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1649,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1553,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID10": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1653,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1554,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID10": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1662,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1555,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID11": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1666,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1556,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID11": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1675,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1557,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID12": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1679,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1558,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID12": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1688,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1559,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID13": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1692,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1560,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID13": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1701,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1561,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID14": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1705,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1562,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID14": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1714,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1563,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID15": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1718,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1564,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID15": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1727,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1565,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID16": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1731,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1566,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID16": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1740,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1567,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID17": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1744,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1568,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID17": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1753,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1569,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID18": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1757,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1570,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID18": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1766,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1571,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID19": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1770,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1572,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID19": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1779,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1573,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID20": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1783,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1574,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID20": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1792,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1575,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID21": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1796,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1576,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID21": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1805,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1577,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID22": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1809,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1578,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID22": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1818,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1579,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID23": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1822,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1580,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID23": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1831,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1581,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_ZIGBEE_INSTALLATION_CODE_UNIT_ID24": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 9,
+          "modbus:address": 1835,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1582,
+      "title": "Radio Installation Code",
+      "titles": {
+        "en-US": "Radio Installation Code",
+        "de-DE": "Funk Installationscode",
+        "fr": "Code installation radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "PARAM_MAC_ADDRESS_UNIT_ID24": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 1844,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1583,
+      "title": "MAC Address",
+      "titles": {
+        "en-US": "MAC Address",
+        "de-DE": "MAC Adresse",
+        "fr": "Adresse MAC"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string",
+      "min": "0",
+      "max": "0xFFFFFFFFFFFFFFFF",
+      "default": "0xFFFFFFFFFFFFFFFF"
+    },
+    "CMD_PAIR_UNPAIR": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 12,
+          "modbus:address": 1848,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1584,
+      "title": "Pair/Unpair the End Device",
+      "titles": {
+        "en-US": "Pair/Unpair the End Device",
+        "de-DE": "Koppeln/Entfernen des Endgeräts",
+        "fr": "Appairer/désappairer l'appareil terminal"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "3"
+    },
+    "PARAM_PAIR_ZIGBEE_CHANNEL_ENABLE_DISABLE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1860,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1585,
+      "title": "Manual radio channel selection on/off",
+      "titles": {
+        "en-US": "Manual radio channel selection on/off",
+        "de-DE": "Manuelle Funkkanahlauswahl ein/aus",
+        "fr": "Sélection manuelle du canal radio ON/OFF"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 1,
+      "default": 0
+    },
+    "PARAM_PAIR_ZIGBEE_CHANNEL": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 1861,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1586,
+      "title": "Radio channel selection",
+      "titles": {
+        "en-US": "Radio channel selection",
+        "de-DE": "Funkkanalauswahl",
+        "fr": "Sélection du canal radio"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 11,
+      "max": 26,
+      "default": 11
+    },
+    "FW_UPDATE_TARGET_STATUS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 2056,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 2052,
+      "title": "Update status",
+      "titles": {
+        "en-US": "Update status",
+        "de-DE": "Update Status",
+        "fr": "État mise à jour"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 4294967295,
+      "default": 0
+    },
+    "CMD_FW_UPDATE": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 2058,
+          "modbus:type": "integer",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:function": "writeSingleHoldingRegister"
+        }
+      ],
+      "cpcom:id": 2053,
+      "title": "Control FW Update",
+      "titles": {
+        "en-US": "Control FW Update",
+        "de-DE": "Steuerung FW Update",
+        "fr": "Commande mises à jour FW"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "FW_UPDATE_IDENT_COM": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 5,
+          "modbus:address": 2059,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 2054,
+      "title": "FW Update Version COM Controller",
+      "titles": {
+        "en-US": "FW Update Version COM Controller",
+        "de-DE": "FW Update Version COM Controller",
+        "fr": "Version mise à jour FW du contrôleur COM"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0"
+    },
+    "FW_UPDATE_IDENT_APP": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 5,
+          "modbus:address": 2064,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 2055,
+      "title": "FW Update Version Application Controller",
+      "titles": {
+        "en-US": "FW Update Version Application Controller",
+        "de-DE": "FW Update Version Application Controller",
+        "fr": "Version mise à jour FW du contrôleur d'application"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0"
+    },
+    "PARAM_PRODUCTION_LOCK_STATUS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 2177,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 2177,
+      "title": "Status of Production Mode",
+      "titles": {
+        "en-US": "Status of Production Mode",
+        "de-DE": "Status des Produktionsmodus",
+        "fr": "État du mode production"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 65535
+    },
+    "ALARM_STATE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 2560,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 60000
+        }
+      ],
+      "cpcom:id": 2560,
+      "title": "Alarm State",
+      "titles": {
+        "en-US": "Alarm State",
+        "de-DE": "Alarm Zustand",
+        "fr": "État de l'alarme"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "OPERATING_HOURS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 2578,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 60000
+        }
+      ],
+      "cpcom:id": 2567,
+      "title": "Operating Hours over all",
+      "titles": {
+        "en-US": "Operating Hours over all",
+        "de-DE": "Betriebsstundenzähler gesamt",
+        "fr": "Heures de fonctionnement global"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:second-Time",
+      "default": 0
+    },
+    "CONF_OPERATING_HOURS_ENABLE_DISABLE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 2582,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 2568,
+      "title": "Operating Hours Alarm on/off",
+      "titles": {
+        "en-US": "Operating Hours Alarm on/off",
+        "de-DE": "Alarm der Betriebsstunden ein/aus",
+        "fr": "Alarme heures de fonctionnement ON/OFF"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 1,
+      "default": 0
+    },
+    "CONF_OPERATING_HOURS_THRESHOLD": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 2583,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 2569,
+      "title": "Threshold Operating Hours",
+      "titles": {
+        "en-US": "Threshold Operating Hours",
+        "de-DE": "Grenzwert Betriebsstunden",
+        "fr": "Seuil heures de fonctionnement"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:second-Time",
+      "min": 60,
+      "max": 864000000,
+      "default": 158000000
+    },
+    "PARAM_RSSI_BLE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 2621,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 2588,
+      "title": "BLE Signal Strength RSSI",
+      "titles": {
+        "en-US": "BLE Signal Strength RSSI",
+        "de-DE": "BLE Empfangssignalstärke RSSI",
+        "fr": "Puissance de signal BLE RSSI"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "unit": "dBm",
+      "min": -127,
+      "max": 20,
+      "default": -127
+    },
+    "PARAM_DATE_TIME_SYNC": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 2629,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 2594,
+      "title": "Time and Synchronization State",
+      "titles": {
+        "en-US": "Time and Synchronization State",
+        "de-DE": "Zeit- und Synchronisationsstatus",
+        "fr": "État horloge et synchronisation"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "default": "946684800"
+    },
+    "PARAM_ZIGBEE_CHANNEL": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 2633,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 2595,
+      "title": "Radio Channel",
+      "titles": {
+        "en-US": "Radio Channel",
+        "de-DE": "Funkkanal",
+        "fr": "Canal radio"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 26,
+      "default": 0
+    },
+    "NETWORK_ID": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 2668,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 2621,
+      "title": "Network ID",
+      "titles": {
+        "en-US": "Network ID",
+        "de-DE": "Netzwerk ID",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "EXTENDED_NETWORK_ID": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 4,
+          "modbus:address": 2669,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 2622,
+      "title": "Extended Network ID",
+      "titles": {
+        "en-US": "Extended Network ID",
+        "de-DE": "Erweiterte Netzwerk ID",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "TEMP": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 3072,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 2000
+        }
+      ],
+      "cpcom:id": 3072,
+      "title": "Temperature",
+      "titles": {
+        "en-US": "Temperature",
+        "de-DE": "Temperatur",
+        "fr": "Température"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:degreeCelsius"
+    },
+    "TEMP_AVERAGE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 3074,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 60000
+        }
+      ],
+      "cpcom:id": 3073,
+      "title": "Average Temperature",
+      "titles": {
+        "en-US": "Average Temperature",
+        "de-DE": "Mittelwert Temperatur",
+        "fr": "Température moyenne"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:degreeCelsius"
+    },
+    "CONF_TEMP_AVERAGE_PERIOD": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 3586,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 3585,
+      "title": "Time period to calculate the average temperature",
+      "titles": {
+        "en-US": "Time period to calculate the average temperature",
+        "de-DE": "Zeitperiode für die Mittelwertbildung der Temperatur",
+        "fr": "Période de temps pour calculer la température moyenne"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "unit": "om:second-Time",
+      "min": 60,
+      "max": 3600,
+      "default": 600
+    },
+    "CONF_TEMP_AVERAGE_ENABLE_DISABLE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 1,
+          "modbus:address": 3588,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 3586,
+      "title": "Temperature Alarm on/off",
+      "titles": {
+        "en-US": "Temperature Alarm on/off",
+        "de-DE": "Temperatur Alarm ein/aus",
+        "fr": "Alarme température ON/OFF"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 1,
+      "default": 1
+    },
+    "CONF_TEMP_AVERAGE_THRESHOLD": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 3589,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 3587,
+      "title": "Threshold Temperature Alarm",
+      "titles": {
+        "en-US": "Threshold Temperature Alarm",
+        "de-DE": "Grenzwert Temperaturüberschreitung",
+        "fr": "Seuil alarme température"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:degreeCelsius",
+      "min": 20,
+      "max": 0,
+      "default": 105
+    },
+    "CONF_TEMP_AVERAGE_HYSTERESIS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 3591,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 3588,
+      "title": "Hysteresis Temperature Alarm",
+      "titles": {
+        "en-US": "Hysteresis Temperature Alarm",
+        "de-DE": "Hysterese Temperatur Alarm",
+        "fr": "Hystérèse Alarme température"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:percent",
+      "min": 0,
+      "max": 10,
+      "default": 10
+    },
+    "LAST_OID_DIAGNOSIS_LOG": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 3593,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 5000
+        }
+      ],
+      "cpcom:id": 3589,
+      "title": "Last OID Diagnosis Log",
+      "titles": {
+        "en-US": "Last OID Diagnosis Log",
+        "de-DE": "Letzte Diagnose Log OID",
+        "fr": "Dernier OID journal de diagnostics"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "LAST_OID_MESSAGE_LOG": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 3672,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 60000
+        }
+      ],
+      "cpcom:id": 3634,
+      "title": "Last OID Message Log",
+      "titles": {
+        "en-US": "Last OID Message Log",
+        "de-DE": "Letzte Message Log OID",
+        "fr": "Dernier OID journal de messages"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "PARAM_DELAYED_ACKNOWLEDGE_COMMAND_STATUS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 4096,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 4096,
+      "title": "Status of currently active delayed acknowledge command",
+      "titles": {
+        "en-US": "Status of currently active delayed acknowledge command",
+        "de-DE": "Status der aktuellen Delayed-Acknowledge-Anfrage",
+        "fr": "État de la commande d'acquittement différé actuellement active"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "PARAM_DELAYED_ACKNOWLEDGE_RESPONSE_LOG": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 121,
+          "modbus:address": 4098,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 4097,
+      "title": "Delayed Response Log information",
+      "titles": {
+        "en-US": "Delayed Response Log information",
+        "de-DE": "Delayed Response Log Information",
+        "fr": "Informations de journal retard de réponse"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0"
+    },
+    "PARAM_DELAYED_ACKNOWLEDGE_READ_LOG_STATUS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 4219,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 4098,
+      "title": "Status of currently active delayed acknowledge read log",
+      "titles": {
+        "en-US": "Status of currently active delayed acknowledge read log",
+        "de-DE": "Status der aktuellen Delayed-Acknowledge Read Log Anfrage",
+        "fr": "État de journal de lecture d'acquittement différé actuellement actif"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "FILE_UPLOAD_GATEWAY_STATUS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 2,
+          "modbus:address": 4731,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 4610,
+      "title": "Upload Status of Powercenter 1000 Gateway",
+      "titles": {
+        "en-US": "Upload Status of Powercenter 1000 Gateway",
+        "de-DE": "Upload Status des Powercenter 1000 Gateways",
+        "fr": "État chargement de la passerelle Powercenter 1000"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 4294967295,
+      "default": 0
+    },
+    "CMD_EXT_PAIR_UNPAIR": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": 255,
+          "modbus:quantity": 50,
+          "modbus:address": 17884,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 16784,
+      "title": "Koppeln/Entfernen des Endgeräts",
+      "titles": {
+        "en-US": "Koppeln/Entfernen des Endgeräts",
+        "de-DE": "Koppeln/Entfernen des Endgeräts",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "string",
+      "min": "0",
+      "max": "3"
+    }
+  },
+  "actions": {},
+  "events": {}
+,"links":[{"href":"{{ID}}","rel":"original"}]}

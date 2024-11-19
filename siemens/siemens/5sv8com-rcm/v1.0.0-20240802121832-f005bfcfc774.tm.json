@@ -1,0 +1,4005 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "schema": "https://schema.org/",
+      "om": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+      "cpcom": "http://siemens.com/wot/2024/electricalproducts/cp-com#"
+    }
+  ],
+  "@type": "tm:ThingModel",
+  "version": {
+    "model": "1.0.0",
+    "baseline": "3.0"
+  },
+  "title": "5SV8COM_RCM",
+  "id": "siemens/siemens/5sv8com-rcm/v1.0.0-20240802121832-f005bfcfc774.tm.json",
+  "Description": "Please update Powercenter and underlying devices to actual version!",
+  "base": "modbus://{{IP}}:{{PORT}}",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": "nosec_sc",
+  "schema:license": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+  "schema:copyrightYear": 2024,
+  "schema:copyrightHolder": {
+    "@type": "Organization",
+    "name": "Siemens"
+  },
+  "schema:author": {
+    "schema:name": "Siemens"
+  },
+  "schema:manufacturer": {
+    "schema:name": "Siemens"
+  },
+  "schema:mpn": "5SV8COM_RCM",
+  "properties": {
+    "IDENT_IM0_MANUFACTURER_ID": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 2,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 2,
+      "title": "Manufacturer ID",
+      "titles": {
+        "en-US": "Manufacturer ID",
+        "de-DE": "Hersteller ID",
+        "fr": "ID fabricant"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 42
+    },
+    "IDENT_IM0_ORDER_ID": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 10,
+          "modbus:address": 3,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 3,
+      "title": "Order Number",
+      "titles": {
+        "en-US": "Order Number",
+        "de-DE": "Bestellnummer",
+        "fr": "Numéro de référence"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string"
+    },
+    "IDENT_IM0_SERIAL_NUMBER": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 8,
+          "modbus:address": 13,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 4,
+      "title": "Serial Number",
+      "titles": {
+        "en-US": "Serial Number",
+        "de-DE": "Seriennummer",
+        "fr": "Numéro de série"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string"
+    },
+    "IDENT_IM0_HARDWARE_REVISION": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 21,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5,
+      "title": "Hardware Revision",
+      "titles": {
+        "en-US": "Hardware Revision",
+        "de-DE": "Hardware Version",
+        "fr": "Révision du matériel"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_IM0_SOFTWARE_REVISION": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 22,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 6,
+      "title": "Software Revision",
+      "titles": {
+        "en-US": "Software Revision",
+        "de-DE": "Software Version",
+        "fr": "Révision du logiciel"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0"
+    },
+    "IDENT_IM0_REVISION_COUNTER": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 24,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 7,
+      "title": "Revision Counter",
+      "titles": {
+        "en-US": "Revision Counter",
+        "de-DE": "Revision Zähler",
+        "fr": "Compteur de révisions"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_IM0_PROFILE_ID": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 25,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 8,
+      "title": "Profibus Profile",
+      "titles": {
+        "en-US": "Profibus Profile",
+        "de-DE": "Profibus Profile",
+        "fr": "Profil PROFIBUS"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 62976,
+      "max": 63231,
+      "default": 62976
+    },
+    "IDENT_IM0_PROFILE_SPECIFIC_TYPE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 26,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 9,
+      "title": "Profibus Profile Type",
+      "titles": {
+        "en-US": "Profibus Profile Type",
+        "de-DE": "Profibus Profile Type",
+        "fr": "Type de profil PROFIBUS"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "IDENT_IM0_VERSION": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 27,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 10,
+      "title": "IM0 Version",
+      "titles": {
+        "en-US": "IM0 Version",
+        "de-DE": "IM0 Version",
+        "fr": "Version IM0"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "min": "1.0",
+      "max": "255255",
+      "default": "0x101"
+    },
+    "IDENT_IM0_SUPPORTED": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 28,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 11,
+      "title": "Supported IM Profiles",
+      "titles": {
+        "en-US": "Supported IM Profiles",
+        "de-DE": "Unterstützte IM Profile",
+        "fr": "Profils IM pris en charge"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 6
+    },
+    "IDENT_IM1_FUNCTION": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 16,
+          "modbus:address": 29,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 12,
+      "title": "Plant Identifier",
+      "titles": {
+        "en-US": "Plant Identifier",
+        "de-DE": "Anlagenkennzeichen",
+        "fr": "Repère de l'installation"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string"
+    },
+    "IDENT_IM1_LOCATION": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 11,
+          "modbus:address": 45,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 13,
+      "title": "Location Identifier",
+      "titles": {
+        "en-US": "Location Identifier",
+        "de-DE": "Einbauort",
+        "fr": "Repère de l'emplacement"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string"
+    },
+    "IDENT_IM2_INSTALLATION_DATE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 8,
+          "modbus:address": 56,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 14,
+      "title": "Installation Date",
+      "titles": {
+        "en-US": "Installation Date",
+        "de-DE": "Installationsdatum",
+        "fr": "Date de l'installation"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "string"
+    },
+    "IDENT_FW_APP_BOT": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 5,
+          "modbus:address": 64,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 15,
+      "title": "FW Version Application Controller Bootloader",
+      "titles": {
+        "en-US": "FW Version Application Controller Bootloader",
+        "de-DE": "FW Version Application Controller Bootloader",
+        "fr": "Version FW du chargeur d'amorçage du contrôleur d'application"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0"
+    },
+    "IDENT_FW_APP": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 5,
+          "modbus:address": 69,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 16,
+      "title": "FW Version Application Controller",
+      "titles": {
+        "en-US": "FW Version Application Controller",
+        "de-DE": "FW Version Application Controller",
+        "fr": "Version FW du contrôleur d'application"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0"
+    },
+    "IDENT_FW_COM_BOT": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 5,
+          "modbus:address": 74,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 17,
+      "title": "FW Version Communication Controller Bootloader",
+      "titles": {
+        "en-US": "FW Version Communication Controller Bootloader",
+        "de-DE": "FW Version Communication Controller Bootloader",
+        "fr": "Version FW du chargeur d'amorçage du contrôleur de communication"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0"
+    },
+    "IDENT_FW_COM": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 5,
+          "modbus:address": 79,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 18,
+      "title": "FW Version Communication Controller",
+      "titles": {
+        "en-US": "FW Version Communication Controller",
+        "de-DE": "FW Version Communication Controller",
+        "fr": "Version FW du contrôleur de communication"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0"
+    },
+    "IDENT_ZIGBEE_STACK_VERSION_INFO": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 4,
+          "modbus:address": 90,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 20,
+      "title": "Radio Stack Version",
+      "titles": {
+        "en-US": "Radio Stack Version",
+        "de-DE": "Funk Stack Version",
+        "fr": "Version de la pile radio"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0"
+    },
+    "IDENT_DEVICE_MARKET": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 94,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 21,
+      "title": "Target Market ",
+      "titles": {
+        "en-US": "Target Market ",
+        "de-DE": "Zielmarkt",
+        "fr": "Marché cible "
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 1,
+      "max": 3,
+      "default": 1
+    },
+    "IDENT_SET_BLINKING": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 97,
+          "modbus:type": "integer",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:function": "writeSingleHoldingRegister"
+        }
+      ],
+      "cpcom:id": 24,
+      "title": "Blinking Mode",
+      "titles": {
+        "en-US": "Blinking Mode",
+        "de-DE": "Blinkmodus",
+        "fr": "Mode clignotant"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "integer",
+      "min": 0,
+      "max": 1,
+      "default": 0
+    },
+    "IDENT_DEVICE_VARIANT": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 112,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 30,
+      "title": "Device Variant",
+      "titles": {
+        "en-US": "Device Variant",
+        "de-DE": "Gerätevariante",
+        "fr": "Variante d'appareil"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65534,
+      "default": 0
+    },
+    "IDENT_ZERO_CURRENT_TRANSFORMER_TYPE_CH1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 129,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 32,
+      "title": "Zero Current Transformer type",
+      "titles": {
+        "en-US": "Zero Current Transformer type",
+        "de-DE": "Messstromwandler Typ",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 1,
+      "max": 2,
+      "default": 1
+    },
+    "IDENT_ZERO_CURRENT_TRANSFORMER_TYPE_CH2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 130,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 33,
+      "title": "Zero Current Transformer type (Instance 2)",
+      "titles": {
+        "en-US": "Zero Current Transformer type (Instance 2)",
+        "de-DE": "Messstromwandler Typ (Instanz 2)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 1,
+      "max": 2,
+      "default": 1
+    },
+    "IDENT_ZERO_CURRENT_TRANSFORMER_TYPE_CH3": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 131,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 34,
+      "title": "Zero Current Transformer type (Instance 3)",
+      "titles": {
+        "en-US": "Zero Current Transformer type (Instance 3)",
+        "de-DE": "Messstromwandler Typ (Instanz 3)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 1,
+      "max": 2,
+      "default": 1
+    },
+    "IDENT_ZERO_CURRENT_TRANSFORMER_TYPE_CH4": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 132,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 35,
+      "title": "Zero Current Transformer type (Instance 4)",
+      "titles": {
+        "en-US": "Zero Current Transformer type (Instance 4)",
+        "de-DE": "Messstromwandler Typ (Instanz 4)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 1,
+      "max": 2,
+      "default": 1
+    },
+    "PARAM_ZIGBEE_TX_POWER_LEVEL": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 1050,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 1049,
+      "title": "Radio TX Power Level",
+      "titles": {
+        "en-US": "Radio TX Power Level",
+        "de-DE": "Funk Sendeleistung",
+        "fr": "Niveau puissance radio TX"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "unit": "dBm",
+      "min": -18,
+      "max": 2,
+      "default": 0
+    },
+    "FW_UPDATE_TARGET_STATUS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 2056,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 2052,
+      "title": "Update status",
+      "titles": {
+        "en-US": "Update status",
+        "de-DE": "Update Status",
+        "fr": "État mise à jour"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 4294967295,
+      "default": 0
+    },
+    "CMD_FW_UPDATE": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 2058,
+          "modbus:type": "integer",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:function": "writeSingleHoldingRegister"
+        }
+      ],
+      "cpcom:id": 2053,
+      "title": "Control FW Update",
+      "titles": {
+        "en-US": "Control FW Update",
+        "de-DE": "Steuerung FW Update",
+        "fr": "Commande mises à jour FW"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "integer",
+      "min": 0,
+      "max": 2
+    },
+    "FW_UPDATE_IDENT_COM": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 5,
+          "modbus:address": 2059,
+          "modbus:type": "string",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 2054,
+      "title": "FW Update Version COM Controller",
+      "titles": {
+        "en-US": "FW Update Version COM Controller",
+        "de-DE": "FW Update Version COM Controller",
+        "fr": "Version mise à jour FW du contrôleur COM"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "default": "0"
+    },
+    "ALARM_STATE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 2560,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 60000
+        }
+      ],
+      "cpcom:id": 2560,
+      "title": "Alarm State",
+      "titles": {
+        "en-US": "Alarm State",
+        "de-DE": "Alarm Zustand",
+        "fr": "État de l'alarme"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "OPERATING_HOURS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 4,
+          "modbus:address": 2578,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 60000
+        }
+      ],
+      "cpcom:id": 2567,
+      "title": "Operating Hours over all",
+      "titles": {
+        "en-US": "Operating Hours over all",
+        "de-DE": "Betriebsstundenzähler gesamt",
+        "fr": "Heures de fonctionnement global"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:second-Time",
+      "default": 0
+    },
+    "CONF_OPERATING_HOURS_ENABLE_DISABLE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 2582,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 2568,
+      "title": "Operating Hours Alarm on/off",
+      "titles": {
+        "en-US": "Operating Hours Alarm on/off",
+        "de-DE": "Alarm der Betriebsstunden ein/aus",
+        "fr": "Alarme heures de fonctionnement ON/OFF"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 1,
+      "default": 0
+    },
+    "CONF_OPERATING_HOURS_THRESHOLD": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 4,
+          "modbus:address": 2583,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 2569,
+      "title": "Threshold Operating Hours",
+      "titles": {
+        "en-US": "Threshold Operating Hours",
+        "de-DE": "Grenzwert Betriebsstunden",
+        "fr": "Seuil heures de fonctionnement"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:second-Time",
+      "min": 60,
+      "max": 864000000,
+      "default": 158000000
+    },
+    "PARAM_RSSI_ZIGBEE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 2622,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 5000
+        }
+      ],
+      "cpcom:id": 2589,
+      "title": "Radio Signal Strength RSSI",
+      "titles": {
+        "en-US": "Radio Signal Strength RSSI",
+        "de-DE": "Funk Empfangssignalstärke RSSI",
+        "fr": "Signal puissance radio RSSI"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "unit": "dBm",
+      "min": -127,
+      "max": 127,
+      "default": -127
+    },
+    "CNT_SWITCH_CYCLES_RELAY1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 2646,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 10000
+        }
+      ],
+      "cpcom:id": 2606,
+      "title": "Number of Relais 1 switching cycles",
+      "titles": {
+        "en-US": "Number of Relais 1 switching cycles",
+        "de-DE": "Anzahl der Relais 1 Schaltvorgänge",
+        "fr": "!"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "CNT_SWITCH_CYCLES_RELAY2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 2647,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 10000
+        }
+      ],
+      "cpcom:id": 2607,
+      "title": "Number of Relais 2 switching cycles",
+      "titles": {
+        "en-US": "Number of Relais 2 switching cycles",
+        "de-DE": "Anzahl der Relais 2 Schaltvorgänge",
+        "fr": "!"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "RCM_ALARM_STATE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 2648,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 60000
+        }
+      ],
+      "cpcom:id": 2608,
+      "title": "RCM Alarm State",
+      "titles": {
+        "en-US": "RCM Alarm State",
+        "de-DE": "RCM Alarm Zustand",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "CMD_RESET_PARAMETER_DEFAULT": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 2650,
+          "modbus:type": "integer",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:function": "writeSingleHoldingRegister"
+        }
+      ],
+      "cpcom:id": 2609,
+      "title": "Reset of parameters",
+      "titles": {
+        "en-US": "Reset of parameters",
+        "de-DE": "Parameter Reset",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "integer",
+      "min": 2069,
+      "max": 2069
+    },
+    "PARAMETER_CHANGE_COUNTER": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 2651,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 60000
+        }
+      ],
+      "cpcom:id": 2610,
+      "title": "Parameter change counter",
+      "titles": {
+        "en-US": "Parameter change counter",
+        "de-DE": "Aktualisierungszähler",
+        "fr": "!"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 65535,
+      "default": 0
+    },
+    "PARAM_RCM_TEST_STATE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 2652,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 10000
+        }
+      ],
+      "cpcom:id": 2611,
+      "title": "RCM test status",
+      "titles": {
+        "en-US": "RCM test status",
+        "de-DE": "RCM Test Status",
+        "fr": "État du test RCM"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 3
+    },
+    "TEMP": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3072,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 2000
+        }
+      ],
+      "cpcom:id": 3072,
+      "title": "Temperature",
+      "titles": {
+        "en-US": "Temperature",
+        "de-DE": "Temperatur",
+        "fr": "Température"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:degreeCelsius"
+    },
+    "TEMP_AVERAGE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3074,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 60000
+        }
+      ],
+      "cpcom:id": 3073,
+      "title": "Average Temperature",
+      "titles": {
+        "en-US": "Average Temperature",
+        "de-DE": "Mittelwert Temperatur",
+        "fr": "Température moyenne"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:degreeCelsius"
+    },
+    "RESIDUAL_CURRENT_AC_PEAK_LOW_PASS_CH1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3340,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 2000
+        }
+      ],
+      "cpcom:id": 3334,
+      "title": "AC Residual Current Low Pass",
+      "titles": {
+        "en-US": "AC Residual Current Low Pass",
+        "de-DE": "AC Differenzstrom Tiefpass",
+        "fr": "!"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere"
+    },
+    "RESIDUAL_CURRENT_RMS_PEAK_LOW_PASS_CH1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3342,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 2000
+        }
+      ],
+      "cpcom:id": 3335,
+      "title": "RMS Residual Current Low Pass",
+      "titles": {
+        "en-US": "RMS Residual Current Low Pass",
+        "de-DE": "RMS Differenzstrom Tiefpass",
+        "fr": "!"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere"
+    },
+    "RESIDUAL_CURRENT_DC_PEAK_CH1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3344,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 2000
+        }
+      ],
+      "cpcom:id": 3336,
+      "title": "DC Residual Current",
+      "titles": {
+        "en-US": "DC Residual Current",
+        "de-DE": "DC Differenzstrom",
+        "fr": "!"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere"
+    },
+    "RESIDUAL_CURRENT_AC_PEAK_LOW_PASS_CH2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3346,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 2000
+        }
+      ],
+      "cpcom:id": 3337,
+      "title": "AC Residual Current Low Pass (Instanz 2)",
+      "titles": {
+        "en-US": "AC Residual Current Low Pass (Instanz 2)",
+        "de-DE": "AC Differenzstrom Tiefpass (Instanz 2)",
+        "fr": "!"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere"
+    },
+    "RESIDUAL_CURRENT_RMS_PEAK_LOW_PASS_CH2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3348,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 2000
+        }
+      ],
+      "cpcom:id": 3338,
+      "title": "RMS Residual Current Low Pass (Instanz 2)",
+      "titles": {
+        "en-US": "RMS Residual Current Low Pass (Instanz 2)",
+        "de-DE": "RMS Differenzstrom Tiefpass (Instanz 2)",
+        "fr": "!"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere"
+    },
+    "RESIDUAL_CURRENT_DC_PEAK_CH2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3350,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 2000
+        }
+      ],
+      "cpcom:id": 3339,
+      "title": "DC Residual Current (Instanz 2)",
+      "titles": {
+        "en-US": "DC Residual Current (Instanz 2)",
+        "de-DE": "DC Differenzstrom (Instanz 2)",
+        "fr": "!"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere"
+    },
+    "RESIDUAL_CURRENT_AC_PEAK_LOW_PASS_CH3": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3352,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 2000
+        }
+      ],
+      "cpcom:id": 3340,
+      "title": "AC Residual Current Low Pass (Instanz 3)",
+      "titles": {
+        "en-US": "AC Residual Current Low Pass (Instanz 3)",
+        "de-DE": "AC Differenzstrom Tiefpass (Instanz 3)",
+        "fr": "!"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere"
+    },
+    "RESIDUAL_CURRENT_RMS_PEAK_LOW_PASS_CH3": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3354,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 2000
+        }
+      ],
+      "cpcom:id": 3341,
+      "title": "RMS Residual Current Low Pass (Instanz 3)",
+      "titles": {
+        "en-US": "RMS Residual Current Low Pass (Instanz 3)",
+        "de-DE": "RMS Differenzstrom Tiefpass (Instanz 3)",
+        "fr": "!"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere"
+    },
+    "RESIDUAL_CURRENT_DC_PEAK_CH3": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3356,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 2000
+        }
+      ],
+      "cpcom:id": 3342,
+      "title": "DC Residual Current (Instanz 3)",
+      "titles": {
+        "en-US": "DC Residual Current (Instanz 3)",
+        "de-DE": "DC Differenzstrom  (Instanz 3)",
+        "fr": "!"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere"
+    },
+    "RESIDUAL_CURRENT_AC_PEAK_LOW_PASS_CH4": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3358,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 2000
+        }
+      ],
+      "cpcom:id": 3343,
+      "title": "AC Residual Current Low Pass (Instanz 4)",
+      "titles": {
+        "en-US": "AC Residual Current Low Pass (Instanz 4)",
+        "de-DE": "AC Differenzstrom Tiefpass (Instanz 4)",
+        "fr": "!"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere"
+    },
+    "RESIDUAL_CURRENT_RMS_PEAK_LOW_PASS_CH4": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3360,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 2000
+        }
+      ],
+      "cpcom:id": 3344,
+      "title": "RMS Residual Current Low Pass (Instanz 4)",
+      "titles": {
+        "en-US": "RMS Residual Current Low Pass (Instanz 4)",
+        "de-DE": "RMS Differenzstrom Tiefpass (Instanz 4)",
+        "fr": "!"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere"
+    },
+    "RESIDUAL_CURRENT_DC_PEAK_CH4": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3362,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 2000
+        }
+      ],
+      "cpcom:id": 3345,
+      "title": "DC Residual Current (Instanz 4)",
+      "titles": {
+        "en-US": "DC Residual Current (Instanz 4)",
+        "de-DE": "DC Differenzstrom (Instanz 4)",
+        "fr": "!"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere"
+    },
+    "MEASURING_ZERO_CURRENT_TRANSFORMER_STATUS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 3364,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 10000
+        }
+      ],
+      "cpcom:id": 3346,
+      "title": "Measuring Zero Current Transfomer Status",
+      "titles": {
+        "en-US": "Measuring Zero Current Transfomer Status",
+        "de-DE": "Messstromwandler-Status",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "RESIDUAL_CURRENT_METERING_STATUS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 3365,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 10000
+        }
+      ],
+      "cpcom:id": 3347,
+      "title": "Metering range status",
+      "titles": {
+        "en-US": "Metering range status",
+        "de-DE": "Status Messbereichsüberschreitung",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "RELAY_IO_STATUS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 3366,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 10000
+        }
+      ],
+      "cpcom:id": 3348,
+      "title": "Relay Input and Output status",
+      "titles": {
+        "en-US": "Relay Input and Output status",
+        "de-DE": "Relais Ein- und Ausgangs-Status",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "RCM_RMS_ALARM_THRESHOLD_CH1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3367,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 60000
+        }
+      ],
+      "cpcom:id": 3349,
+      "title": "Effective Threshold RCM RMS Alarm",
+      "titles": {
+        "en-US": "Effective Threshold RCM RMS Alarm",
+        "de-DE": "Wirksamer Grenzwert Differenzstrom RCM RMS Alarm",
+        "fr": "!"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere"
+    },
+    "RCM_RMS_ALARM_THRESHOLD_CH1_DKSPOS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 3369,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 60000
+        }
+      ],
+      "cpcom:id": 3350,
+      "title": "RCS config status: Threshold RCM RMS Alarm",
+      "titles": {
+        "en-US": "RCS config status: Threshold RCM RMS Alarm",
+        "de-DE": "DKS Konfigurationsstatus: Grenzwert Differenzstrom RCM RMS Alarm",
+        "fr": "!"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 65535
+    },
+    "RCM_ALARM_ON_TIME_DELAY_CH1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3370,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 60000
+        }
+      ],
+      "cpcom:id": 3351,
+      "title": "Effective Activation Delay RCM Alarm",
+      "titles": {
+        "en-US": "Effective Activation Delay RCM Alarm",
+        "de-DE": "Wirksame Verzögerungszeit RCM Alarm Aktivierung",
+        "fr": "!"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:second-Time"
+    },
+    "RCM_ALARM_ON_TIME_DELAY_CH1_DKSPOS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 3372,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 60000
+        }
+      ],
+      "cpcom:id": 3352,
+      "title": "RCS config status: Activation Delay RCM Alarm",
+      "titles": {
+        "en-US": "RCS config status: Activation Delay RCM Alarm",
+        "de-DE": "DKS Konfigurationsstatus: Verzögerungszeit RCM Alarm Aktivierung",
+        "fr": "!"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 65535
+    },
+    "LAST_OID_TEST_LOG": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3584,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 5000
+        }
+      ],
+      "cpcom:id": 3584,
+      "title": "Last OID Test Log",
+      "titles": {
+        "en-US": "Last OID Test Log",
+        "de-DE": "Letzte Test Log OID",
+        "fr": "Dernier OID journal de test"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "CONF_TEMP_AVERAGE_PERIOD": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3586,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 3585,
+      "title": "Time period to calculate the average temperature",
+      "titles": {
+        "en-US": "Time period to calculate the average temperature",
+        "de-DE": "Zeitperiode für die Mittelwertbildung der Temperatur",
+        "fr": "Période de temps pour calculer la température moyenne"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "unit": "om:second-Time",
+      "min": 60,
+      "max": 3600,
+      "default": 600
+    },
+    "CONF_TEMP_AVERAGE_ENABLE_DISABLE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 3588,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 3586,
+      "title": "Temperature Alarm on/off",
+      "titles": {
+        "en-US": "Temperature Alarm on/off",
+        "de-DE": "Temperatur Alarm ein/aus",
+        "fr": "Alarme température ON/OFF"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 1,
+      "default": 1
+    },
+    "CONF_TEMP_AVERAGE_THRESHOLD": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3589,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 3587,
+      "title": "Threshold Temperature Alarm",
+      "titles": {
+        "en-US": "Threshold Temperature Alarm",
+        "de-DE": "Grenzwert Temperaturüberschreitung",
+        "fr": "Seuil alarme température"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:degreeCelsius",
+      "min": 20,
+      "max": 0,
+      "default": 105
+    },
+    "CONF_TEMP_AVERAGE_HYSTERESIS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3591,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 3588,
+      "title": "Hysteresis Temperature Alarm",
+      "titles": {
+        "en-US": "Hysteresis Temperature Alarm",
+        "de-DE": "Hysterese Temperatur Alarm",
+        "fr": "Hystérèse Alarme température"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:percent",
+      "min": 0,
+      "max": 10,
+      "default": 10
+    },
+    "LAST_OID_DIAGNOSIS_LOG": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3593,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 5000
+        }
+      ],
+      "cpcom:id": 3589,
+      "title": "Last OID Diagnosis Log",
+      "titles": {
+        "en-US": "Last OID Diagnosis Log",
+        "de-DE": "Letzte Diagnose Log OID",
+        "fr": "Dernier OID journal de diagnostics"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "LAST_OID_TRIP_LOG": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 3671,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 5000
+        }
+      ],
+      "cpcom:id": 3633,
+      "title": "Last OID Trip Log",
+      "titles": {
+        "en-US": "Last OID Trip Log",
+        "de-DE": "Letzte Trip Log OID",
+        "fr": "Dernier OID journal de déclenchements"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "LAST_OID_MESSAGE_LOG": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 3672,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:pollingTime": 60000
+        }
+      ],
+      "cpcom:id": 3634,
+      "title": "Last OID Message Log",
+      "titles": {
+        "en-US": "Last OID Message Log",
+        "de-DE": "Letzte Message Log OID",
+        "fr": "Dernier OID journal de messages"
+      },
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "integer",
+      "default": 0
+    },
+    "CONF_RCM_ALARM_STARTUP_TIME_DELAY": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5124,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5124,
+      "title": "General RCM Alarm Startup Time Delay",
+      "titles": {
+        "en-US": "General RCM Alarm Startup Time Delay",
+        "de-DE": "Generelle RCM Alarm Anlaufzeitverzögerung",
+        "fr": "Temporisation au démarrage de l’alarme RCM générale"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:second-Time",
+      "min": 0,
+      "max": 600,
+      "default": 0
+    },
+    "CONF_RCM_ALARM_HYSTERESIS": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5128,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5126,
+      "title": "Hysteresis RCM Alarm",
+      "titles": {
+        "en-US": "Hysteresis RCM Alarm",
+        "de-DE": "Hysterese RCM Alarm",
+        "fr": "Hystérèse RCM alarme"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:percent",
+      "min": 10,
+      "max": 25,
+      "default": 15
+    },
+    "CONF_RCM_ALARM_ON_TIME_DELAY_CH1_REMOTE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5130,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5127,
+      "title": "Activation Delay RCM Alarm",
+      "titles": {
+        "en-US": "Activation Delay RCM Alarm",
+        "de-DE": "Verzögerungszeit RCM Alarm Aktivierung",
+        "fr": "Temporisation d'activation de l'alarme RCM"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:second-Time",
+      "min": 0,
+      "max": 10,
+      "default": 0
+    },
+    "CONF_RCM_ALARM_OFF_TIME_DELAY_CH1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5132,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5128,
+      "title": "Deactivation Delay RCM Alarm",
+      "titles": {
+        "en-US": "Deactivation Delay RCM Alarm",
+        "de-DE": "Verzögerungszeit RCM Alarm Deaktivierung",
+        "fr": "Temporisation de désactivation de l'alarme RCM"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:second-Time",
+      "min": 0,
+      "max": 3600,
+      "default": 1
+    },
+    "CONF_RCM_ALARM_AUTO_RESET_ENABLE_DISABLE_CH1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5134,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5129,
+      "title": "Automatic Reset RCM Alarm on/off",
+      "titles": {
+        "en-US": "Automatic Reset RCM Alarm on/off",
+        "de-DE": "Automatisches Zurücksetzen RCM Alarm ein/aus",
+        "fr": "Réinitialisation automatique de l'alarme RCM ON/OFF"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 1,
+      "default": 1
+    },
+    "CONF_RCM_AC_PRE_ALARM_THRESHOLD_CH1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5137,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5132,
+      "title": "Threshold RCM AC Pre-Alarm",
+      "titles": {
+        "en-US": "Threshold RCM AC Pre-Alarm",
+        "de-DE": "Grenzwert RCM AC Vor-Alarm",
+        "fr": "Seuil préalarme CA RCM"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:percent",
+      "min": 50,
+      "max": 100,
+      "default": 50
+    },
+    "CONF_RCM_AC_ALARM_THRESHOLD_CH1_REMOTE": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5139,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5133,
+      "title": "Threshold RCM AC Alarm",
+      "titles": {
+        "en-US": "Threshold RCM AC Alarm",
+        "de-DE": "Grenzwert RCM AC Alarm",
+        "fr": "Seuil alarme CA RCM"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere",
+      "min": 0,
+      "max": 0,
+      "default": 0
+    },
+    "CONF_RCM_RMS_PRE_ALARM_THRESHOLD_CH1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5143,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5136,
+      "title": "Threshold RCM RMS Pre-Alarm",
+      "titles": {
+        "en-US": "Threshold RCM RMS Pre-Alarm",
+        "de-DE": "Grenzwert RCM RMS Vor-Alarm",
+        "fr": "Seuil préalarme RMS RCM"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:percent",
+      "min": 50,
+      "max": 100,
+      "default": 50
+    },
+    "CONF_RCM_RMS_ALARM_THRESHOLD_CH1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5145,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5137,
+      "title": "Threshold RCM RMS Alarm",
+      "titles": {
+        "en-US": "Threshold RCM RMS Alarm",
+        "de-DE": "Grenzwert RCM RMS Alarm",
+        "fr": "Seuil alarme RMS RCM"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere",
+      "min": 0,
+      "max": 0,
+      "default": 0
+    },
+    "CONF_RCM_DC_PRE_ALARM_THRESHOLD_CH1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5149,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5140,
+      "title": "Threshold RCM DC Pre-Alarm",
+      "titles": {
+        "en-US": "Threshold RCM DC Pre-Alarm",
+        "de-DE": "Grenzwert Differenzstrom RCM DC Vor-Alarm",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:percent",
+      "min": 50,
+      "max": 100,
+      "default": 50
+    },
+    "CONF_RCM_DC_ALARM_THRESHOLD_CH1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5151,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5141,
+      "title": "Threshold RCM DC Alarm",
+      "titles": {
+        "en-US": "Threshold RCM DC Alarm",
+        "de-DE": "Grenzwert Differenzstrom RCM DC Alarm",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere",
+      "min": 0,
+      "max": 0,
+      "default": 0
+    },
+    "CONF_RCM_ALARM_ON_TIME_DELAY_CH2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5153,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5142,
+      "title": "Activation Delay RCM Alarm (Instance 2)",
+      "titles": {
+        "en-US": "Activation Delay RCM Alarm (Instance 2)",
+        "de-DE": "Verzögerungszeit RCM Alarm Aktivierung (Instanz 2)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:second-Time",
+      "min": 0,
+      "max": 10,
+      "default": 0
+    },
+    "CONF_RCM_ALARM_OFF_TIME_DELAY_CH2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5155,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5143,
+      "title": "Deactivation Delay RCM Alarm (Instance 2)",
+      "titles": {
+        "en-US": "Deactivation Delay RCM Alarm (Instance 2)",
+        "de-DE": "Verzögerungszeit RCM Alarm Deaktivierung (Instanz 2)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:second-Time",
+      "min": 0,
+      "max": 3600,
+      "default": 1
+    },
+    "CONF_RCM_ALARM_AUTO_RESET_ENABLE_DISABLE_CH2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5157,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5144,
+      "title": "Automatic Reset RCM Alarm on/off  (Instance 2)",
+      "titles": {
+        "en-US": "Automatic Reset RCM Alarm on/off  (Instance 2)",
+        "de-DE": "Automatisches Zurücksetzen RCM Alarm ein/aus (Instanz 2)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 1,
+      "default": 1
+    },
+    "CONF_RCM_AC_PRE_ALARM_THRESHOLD_CH2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5158,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5145,
+      "title": "Threshold RCM AC Pre-Alarm (Instance 2)",
+      "titles": {
+        "en-US": "Threshold RCM AC Pre-Alarm (Instance 2)",
+        "de-DE": "Grenzwert Differenzstrom RCM AC Vor-Alarm (Instanz 2)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:percent",
+      "min": 50,
+      "max": 100,
+      "default": 50
+    },
+    "CONF_RCM_AC_ALARM_THRESHOLD_CH2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5160,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5146,
+      "title": "Threshold RCM AC Pre-Alarm (Instance 2)",
+      "titles": {
+        "en-US": "Threshold RCM AC Pre-Alarm (Instance 2)",
+        "de-DE": "Grenzwert Differenzstrom RCM AC Alarm (Instanz 2)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere",
+      "min": 0,
+      "max": 0,
+      "default": 0
+    },
+    "CONF_RCM_RMS_PRE_ALARM_THRESHOLD_CH2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5162,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5147,
+      "title": "Threshold RCM RMS Pre-Alarm (Instance 2)",
+      "titles": {
+        "en-US": "Threshold RCM RMS Pre-Alarm (Instance 2)",
+        "de-DE": "Grenzwert Differenzstrom RCM RMS Vor-Alarm (Instanz 2)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:percent",
+      "min": 50,
+      "max": 100,
+      "default": 50
+    },
+    "CONF_RCM_RMS_ALARM_THRESHOLD_CH2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5164,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5148,
+      "title": "Threshold RCM RMS Alarm (Instance 2)",
+      "titles": {
+        "en-US": "Threshold RCM RMS Alarm (Instance 2)",
+        "de-DE": "Grenzwert Differenzstrom RCM RMS Alarm (Instanz 2)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere",
+      "min": 0,
+      "max": 0,
+      "default": 0
+    },
+    "CONF_RCM_DC_PRE_ALARM_THRESHOLD_CH2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5166,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5149,
+      "title": "Threshold RCM DC Pre-Alarm (Instance 2)",
+      "titles": {
+        "en-US": "Threshold RCM DC Pre-Alarm (Instance 2)",
+        "de-DE": "Grenzwert Differenzstrom RCM DC Vor-Alarm (Instanz 2)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:percent",
+      "min": 50,
+      "max": 100,
+      "default": 50
+    },
+    "CONF_RCM_DC_ALARM_THRESHOLD_CH2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5168,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5150,
+      "title": "Threshold RCM DC Alarm (Instance 2)",
+      "titles": {
+        "en-US": "Threshold RCM DC Alarm (Instance 2)",
+        "de-DE": "Grenzwert Differenzstrom RCM DC Alarm (Instanz 2)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere",
+      "min": 0,
+      "max": 0,
+      "default": 0
+    },
+    "CONF_RCM_ALARM_ON_TIME_DELAY_CH3": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5170,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5151,
+      "title": "Activation Delay RCM Alarm (Instance 3)",
+      "titles": {
+        "en-US": "Activation Delay RCM Alarm (Instance 3)",
+        "de-DE": "Verzögerungszeit RCM Alarm Aktivierung (Instanz 3)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:second-Time",
+      "min": 0,
+      "max": 10,
+      "default": 0
+    },
+    "CONF_RCM_ALARM_OFF_TIME_DELAY_CH3": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5172,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5152,
+      "title": "Deactivation Delay RCM Alarm (Instance 3)",
+      "titles": {
+        "en-US": "Deactivation Delay RCM Alarm (Instance 3)",
+        "de-DE": "Verzögerungszeit RCM Alarm Deaktivierung (Instanz 3)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:second-Time",
+      "min": 0,
+      "max": 3600,
+      "default": 1
+    },
+    "CONF_RCM_ALARM_AUTO_RESET_ENABLE_DISABLE_CH3": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5174,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5153,
+      "title": "Automatic Reset RCM Alarm on/off  (Instance 3)",
+      "titles": {
+        "en-US": "Automatic Reset RCM Alarm on/off  (Instance 3)",
+        "de-DE": "Automatisches Zurücksetzen RCM Alarm ein/aus (Instanz 3)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 1,
+      "default": 1
+    },
+    "CONF_RCM_AC_PRE_ALARM_THRESHOLD_CH3": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5175,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5154,
+      "title": "Threshold RCM AC Pre-Alarm (Instance 3)",
+      "titles": {
+        "en-US": "Threshold RCM AC Pre-Alarm (Instance 3)",
+        "de-DE": "Grenzwert Differenzstrom RCM AC Vor-Alarm (Instanz 3)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:percent",
+      "min": 50,
+      "max": 100,
+      "default": 50
+    },
+    "CONF_RCM_AC_ALARM_THRESHOLD_CH3": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5177,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5155,
+      "title": "Threshold RCM AC Pre-Alarm (Instance 3)",
+      "titles": {
+        "en-US": "Threshold RCM AC Pre-Alarm (Instance 3)",
+        "de-DE": "Grenzwert Differenzstrom RCM AC Alarm (Instanz 3)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere",
+      "min": 0,
+      "max": 0,
+      "default": 0
+    },
+    "CONF_RCM_RMS_PRE_ALARM_THRESHOLD_CH3": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5179,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5156,
+      "title": "Threshold RCM RMS Pre-Alarm (Instance 3)",
+      "titles": {
+        "en-US": "Threshold RCM RMS Pre-Alarm (Instance 3)",
+        "de-DE": "Grenzwert Differenzstrom RCM RMS Vor-Alarm (Instanz 3)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:percent",
+      "min": 50,
+      "max": 100,
+      "default": 50
+    },
+    "CONF_RCM_RMS_ALARM_THRESHOLD_CH3": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5181,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5157,
+      "title": "Threshold RCM RMS Alarm (Instance 3)",
+      "titles": {
+        "en-US": "Threshold RCM RMS Alarm (Instance 3)",
+        "de-DE": "Grenzwert Differenzstrom RCM RMS Alarm (Instanz 3)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere",
+      "min": 0,
+      "max": 0,
+      "default": 0
+    },
+    "CONF_RCM_DC_PRE_ALARM_THRESHOLD_CH3": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5183,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5158,
+      "title": "Threshold RCM DC Pre-Alarm (Instance 3)",
+      "titles": {
+        "en-US": "Threshold RCM DC Pre-Alarm (Instance 3)",
+        "de-DE": "Grenzwert Differenzstrom RCM DC Vor-Alarm (Instanz 3)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:percent",
+      "min": 50,
+      "max": 100,
+      "default": 50
+    },
+    "CONF_RCM_DC_ALARM_THRESHOLD_CH3": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5185,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5159,
+      "title": "Threshold RCM DC Alarm (Instance 3)",
+      "titles": {
+        "en-US": "Threshold RCM DC Alarm (Instance 3)",
+        "de-DE": "Grenzwert Differenzstrom RCM DC Alarm (Instanz 3)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere",
+      "min": 0,
+      "max": 0,
+      "default": 0
+    },
+    "CONF_RCM_ALARM_ON_TIME_DELAY_CH4": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5187,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5160,
+      "title": "Activation Delay RCM Alarm (Instance 4)",
+      "titles": {
+        "en-US": "Activation Delay RCM Alarm (Instance 4)",
+        "de-DE": "Verzögerungszeit RCM Alarm Aktivierung (Instanz 4)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:second-Time",
+      "min": 0,
+      "max": 10,
+      "default": 0
+    },
+    "CONF_RCM_ALARM_OFF_TIME_DELAY_CH4": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5189,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5161,
+      "title": "Deactivation Delay RCM Alarm (Instance 4)",
+      "titles": {
+        "en-US": "Deactivation Delay RCM Alarm (Instance 4)",
+        "de-DE": "Verzögerungszeit RCM Alarm Deaktivierung (Instanz 4)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:second-Time",
+      "min": 0,
+      "max": 3600,
+      "default": 1
+    },
+    "CONF_RCM_ALARM_AUTO_RESET_ENABLE_DISABLE_CH4": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5191,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5162,
+      "title": "Automatic Reset RCM Alarm on/off  (Instance 4)",
+      "titles": {
+        "en-US": "Automatic Reset RCM Alarm on/off  (Instance 4)",
+        "de-DE": "Automatisches Zurücksetzen RCM Alarm ein/aus (Instanz 4)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 1,
+      "default": 1
+    },
+    "CONF_RCM_AC_PRE_ALARM_THRESHOLD_CH4": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5192,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5163,
+      "title": "Threshold RCM AC Pre-Alarm (Instance 4)",
+      "titles": {
+        "en-US": "Threshold RCM AC Pre-Alarm (Instance 4)",
+        "de-DE": "Grenzwert Differenzstrom RCM AC Vor-Alarm (Instanz 4)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:percent",
+      "min": 50,
+      "max": 100,
+      "default": 50
+    },
+    "CONF_RCM_AC_ALARM_THRESHOLD_CH4": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5194,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5164,
+      "title": "Threshold RCM AC Pre-Alarm (Instance 4)",
+      "titles": {
+        "en-US": "Threshold RCM AC Pre-Alarm (Instance 4)",
+        "de-DE": "Grenzwert Differenzstrom RCM AC Alarm (Instanz 4)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere",
+      "min": 0,
+      "max": 0,
+      "default": 0
+    },
+    "CONF_RCM_RMS_PRE_ALARM_THRESHOLD_CH4": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5196,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5165,
+      "title": "Threshold RCM RMS Pre-Alarm (Instance 4)",
+      "titles": {
+        "en-US": "Threshold RCM RMS Pre-Alarm (Instance 4)",
+        "de-DE": "Grenzwert Differenzstrom RCM RMS Vor-Alarm (Instanz 4)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:percent",
+      "min": 50,
+      "max": 100,
+      "default": 50
+    },
+    "CONF_RCM_RMS_ALARM_THRESHOLD_CH4": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5198,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5166,
+      "title": "Threshold RCM RMS Alarm (Instance 4)",
+      "titles": {
+        "en-US": "Threshold RCM RMS Alarm (Instance 4)",
+        "de-DE": "Grenzwert Differenzstrom RCM RMS Alarm (Instanz 4)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere",
+      "min": 0,
+      "max": 0,
+      "default": 0
+    },
+    "CONF_RCM_DC_PRE_ALARM_THRESHOLD_CH4": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5200,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5167,
+      "title": "Threshold RCM DC Pre-Alarm (Instance 4)",
+      "titles": {
+        "en-US": "Threshold RCM DC Pre-Alarm (Instance 4)",
+        "de-DE": "Grenzwert Differenzstrom RCM DC Vor-Alarm (Instanz 4)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:percent",
+      "min": 50,
+      "max": 100,
+      "default": 50
+    },
+    "CONF_RCM_DC_ALARM_THRESHOLD_CH4": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 2,
+          "modbus:address": 5202,
+          "modbus:type": "number",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5168,
+      "title": "Threshold RCM DC Alarm (Instance 4)",
+      "titles": {
+        "en-US": "Threshold RCM DC Alarm (Instance 4)",
+        "de-DE": "Grenzwert Differenzstrom RCM DC Alarm (Instanz 4)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "om:ampere",
+      "min": 0,
+      "max": 0,
+      "default": 0
+    },
+    "CONF_MEASURING_ZERO_CURRENT_TRANSFORMER_STATUS_MONITORING_1CH": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5204,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5169,
+      "title": "Measuring Zero Current Transfomer Status Monitoring",
+      "titles": {
+        "en-US": "Measuring Zero Current Transfomer Status Monitoring",
+        "de-DE": "Messstromwandler Anschlussüberwachung",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 1,
+      "default": 1
+    },
+    "CONF_MEASURING_ZERO_CURRENT_TRANSFORMER_STATUS_MONITORING_4CH": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5205,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5170,
+      "title": "Measuring Zero Current Transfomer Status Monitoring ",
+      "titles": {
+        "en-US": "Measuring Zero Current Transfomer Status Monitoring ",
+        "de-DE": "Messstromwandler Anschlussüberwachung",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 15,
+      "default": 15
+    },
+    "CONF_RELAY1_PROPERTIES": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5206,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5171,
+      "title": "Common Relay 1 properties",
+      "titles": {
+        "en-US": "Common Relay 1 properties",
+        "de-DE": "Generelle Relais 1 Parameter",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 15,
+      "default": 15
+    },
+    "CONF_RELAY1_1CH": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5207,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5172,
+      "title": "Relay 1 Alarm Assignment",
+      "titles": {
+        "en-US": "Relay 1 Alarm Assignment",
+        "de-DE": "Relais 1 Alarmzuordnung",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 7,
+      "default": 7
+    },
+    "CONF_RELAY1_4CH": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5208,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5173,
+      "title": "Relay 1 Alarm Assignment",
+      "titles": {
+        "en-US": "Relay 1 Alarm Assignment",
+        "de-DE": "Relais 1 Alarmzuordnung",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 4095,
+      "default": 4095
+    },
+    "CONF_RELAY2_PROPERTIES": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5209,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5174,
+      "title": "Common Relay 2 properties",
+      "titles": {
+        "en-US": "Common Relay 2 properties",
+        "de-DE": "Generelle Relais 2 Parameter",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 15,
+      "default": 15
+    },
+    "CONF_RELAY2_1CH": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5210,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5175,
+      "title": "Relay 2 Alarm Assignment",
+      "titles": {
+        "en-US": "Relay 2 Alarm Assignment",
+        "de-DE": "Relais 2 Alarmzuordnung",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 7,
+      "default": 7
+    },
+    "CONF_RELAY2_4CH": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5211,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5176,
+      "title": "Relay 2 Alarm Assignment",
+      "titles": {
+        "en-US": "Relay 2 Alarm Assignment",
+        "de-DE": "Relais 2 Alarmzuordnung",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 4095,
+      "default": 4095
+    },
+    "CONF_DIGITALOUT1_PROPERTIES": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5212,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5177,
+      "title": "Common Digital Output 1 properties",
+      "titles": {
+        "en-US": "Common Digital Output 1 properties",
+        "de-DE": "Generelle Digital Ausgang 1 Parameter",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 15,
+      "default": 15
+    },
+    "CONF_DIGITALOUT1_1CH": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5213,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5178,
+      "title": "Digital Output 1 Alarm Assignment",
+      "titles": {
+        "en-US": "Digital Output 1 Alarm Assignment",
+        "de-DE": "Digital Ausgang 1 Alarmzuordnung",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 7,
+      "default": 7
+    },
+    "CONF_DIGITALOUT1_4CH": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5214,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5179,
+      "title": "Digital Output 1 Alarm Assignment",
+      "titles": {
+        "en-US": "Digital Output 1 Alarm Assignment",
+        "de-DE": "Digital Ausgang 1 Alarmzuordnung",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 4095,
+      "default": 4095
+    },
+    "CONF_DIGITALOUT2_PROPERTIES": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5215,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5180,
+      "title": "Common Digital Output 2 properties",
+      "titles": {
+        "en-US": "Common Digital Output 2 properties",
+        "de-DE": "Generelle Digital Ausgang 2 Parameter",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 15,
+      "default": 15
+    },
+    "CONF_DIGITALOUT2_1CH": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5216,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5181,
+      "title": "Digital Output 2 Alarm Assignment",
+      "titles": {
+        "en-US": "Digital Output 2 Alarm Assignment",
+        "de-DE": "Digital Ausgang 2 Alarmzuordnung",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 7,
+      "default": 7
+    },
+    "CONF_DIGITALOUT2_4CH": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5217,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5182,
+      "title": "Digital Output 2 Alarm Assignment",
+      "titles": {
+        "en-US": "Digital Output 2 Alarm Assignment",
+        "de-DE": "Digital Ausgang 2 Alarmzuordnung",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 4095,
+      "default": 4095
+    },
+    "CONF_RESIDUAL_CURRENT_FILTER_CH1": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5218,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5183,
+      "title": "Filter configuration",
+      "titles": {
+        "en-US": "Filter configuration",
+        "de-DE": "Filtereinstellung",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 1,
+      "max": 12,
+      "default": 8
+    },
+    "CONF_RESIDUAL_CURRENT_FILTER_CH2": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5219,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5184,
+      "title": "Filter configuration (Instance 2)",
+      "titles": {
+        "en-US": "Filter configuration (Instance 2)",
+        "de-DE": "Filtereinstellung (Instanz 2)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 1,
+      "max": 12,
+      "default": 8
+    },
+    "CONF_RESIDUAL_CURRENT_FILTER_CH3": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5220,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5185,
+      "title": "Filter configuration (Instance 3)",
+      "titles": {
+        "en-US": "Filter configuration (Instance 3)",
+        "de-DE": "Filtereinstellung (Instanz 3)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 1,
+      "max": 12,
+      "default": 8
+    },
+    "CONF_RESIDUAL_CURRENT_FILTER_CH4": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5221,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5186,
+      "title": "Filter configuration (Instance 4)",
+      "titles": {
+        "en-US": "Filter configuration (Instance 4)",
+        "de-DE": "Filtereinstellung (Instanz 4)",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 1,
+      "max": 12,
+      "default": 8
+    },
+    "CONF_RELAY1_TEST_CONTROL": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5222,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5187,
+      "title": "Relay 1 test",
+      "titles": {
+        "en-US": "Relay 1 test",
+        "de-DE": "Relais 1 Test",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 2,
+      "default": 2
+    },
+    "CONF_RELAY2_TEST_CONTROL": {
+      "forms": [
+        {
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5223,
+          "modbus:type": "integer",
+          "modbus:entity": "HoldingRegister",
+          "modbus:zeroBasedAddressing": false
+        }
+      ],
+      "cpcom:id": 5188,
+      "title": "Relay 2 test",
+      "titles": {
+        "en-US": "Relay 2 test",
+        "de-DE": "Relais 2 Test",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "integer",
+      "min": 0,
+      "max": 2,
+      "default": 2
+    },
+    "CMD_START_CALIBRATION": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5224,
+          "modbus:type": "integer",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:function": "writeSingleHoldingRegister"
+        }
+      ],
+      "cpcom:id": 5189,
+      "title": "Start of DC offset calibration",
+      "titles": {
+        "en-US": "Start of DC offset calibration",
+        "de-DE": "DC Offset Kalibrierung starten",
+        "fr": "!"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "integer",
+      "min": 1,
+      "max": 4
+    },
+    "CMD_ACKNOWLEDGE_RCM_ALARM": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5225,
+          "modbus:type": "integer",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:function": "writeSingleHoldingRegister"
+        }
+      ],
+      "cpcom:id": 5190,
+      "title": "RCM Alarm Acknowledge",
+      "titles": {
+        "en-US": "RCM Alarm Acknowledge",
+        "de-DE": "RCM Alarm Bestätigung",
+        "fr": "Acquittement de l'alarme RCM"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "integer",
+      "min": 2069,
+      "max": 2069
+    },
+    "CMD_START_RCM_TEST": {
+      "forms": [
+        {
+          "op": [
+            "writeproperty"
+          ],
+          "href": "/",
+          "modbus:unitID": "{{UNITID}}",
+          "modbus:quantity": 1,
+          "modbus:address": 5226,
+          "modbus:type": "integer",
+          "modbus:zeroBasedAddressing": false,
+          "modbus:function": "writeSingleHoldingRegister"
+        }
+      ],
+      "cpcom:id": 5191,
+      "title": "Start of RCM test",
+      "titles": {
+        "en-US": "Start of RCM test",
+        "de-DE": "RCM Test starten",
+        "fr": "Démarrage du test RCM"
+      },
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": true,
+      "type": "integer",
+      "min": 2069,
+      "max": 2069
+    }
+  },
+  "actions": {},
+  "events": {}
+,"links":[{"href":"{{ID}}","rel":"original"}]}

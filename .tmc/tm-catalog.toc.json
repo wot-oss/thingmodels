@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "created": "2024-11-19T17:52:11.643703921+01:00"
+  },
+  "data": [
+    {
+      "name": "siemens/siemens/3nacom-fuse",
+      "schema:manufacturer": {
+        "schema:name": "Siemens"
+      },
+      "schema:mpn": "3NACOM_FUSE",
+      "schema:author": {
+        "schema:name": "Siemens"
+      },
+      "versions": [
+        {
+          "description": "Please update Powercenter and underlying devices to actual version!",
+          "version": {
+            "model": "1.0.0"
+          },
+          "links": {
+            "content": "siemens/siemens/3nacom-fuse/v1.0.0-20240802121832-3b18ae135fbc.tm.json"
+          },
+          "tmID": "siemens/siemens/3nacom-fuse/v1.0.0-20240802121832-3b18ae135fbc.tm.json",
+          "digest": "3b18ae135fbc",
+          "timestamp": "20240802121832",
+          "externalID": "{{ID}}"
+        }
+      ]
+    },
+    {
+      "name": "siemens/siemens/3rv2com-msp",
+      "schema:manufacturer": {
+        "schema:name": "Siemens"
+      },
+      "schema:mpn": "3RV2COM_MSP",
+      "schema:author": {
+        "schema:name": "Siemens"
+      },
+      "versions": [
+        {
+          "description": "Please update Powercenter and underlying devices to actual version!",
+          "version": {
+            "model": "1.0.0"
+          },
+          "links": {
+            "content": "siemens/siemens/3rv2com-msp/v1.0.0-20240802121832-c897312ce01a.tm.json"
+          },
+          "tmID": "siemens/siemens/3rv2com-msp/v1.0.0-20240802121832-c897312ce01a.tm.json",
+          "digest": "c897312ce01a",
+          "timestamp": "20240802121832",
+          "externalID": "{{ID}}"
+        }
+      ]
+    },
+    {
+      "name": "siemens/siemens/5sl6-com-mp-mcb-rcm",
+      "schema:manufacturer": {
+        "schema:name": "Siemens"
+      },
+      "schema:mpn": "5SL6_COM_MP_MCB_RCM",
+      "schema:author": {
+        "schema:name": "Siemens"
+      },
+      "versions": [
+        {
+          "description": "Please update Powercenter and underlying devices to actual version!",
+          "version": {
+            "model": "1.0.0"
+          },
+          "links": {
+            "content": "siemens/siemens/5sl6-com-mp-mcb-rcm/v1.0.0-20240802121832-f031fedee995.tm.json"
+          },
+          "tmID": "siemens/siemens/5sl6-com-mp-mcb-rcm/v1.0.0-20240802121832-f031fedee995.tm.json",
+          "digest": "f031fedee995",
+          "timestamp": "20240802121832",
+          "externalID": "{{ID}}"
+        }
+      ]
+    },
+    {
+      "name": "siemens/siemens/5sl6com-mcb",
+      "schema:manufacturer": {
+        "schema:name": "Siemens"
+      },
+      "schema:mpn": "5SL6COM_MCB",
+      "schema:author": {
+        "schema:name": "Siemens"
+      },
+      "versions": [
+        {
+          "description": "Please update Powercenter and underlying devices to actual version!",
+          "version": {
+            "model": "1.0.0"
+          },
+          "links": {
+            "content": "siemens/siemens/5sl6com-mcb/v1.0.0-20240802121832-34aec07ae93f.tm.json"
+          },
+          "tmID": "siemens/siemens/5sl6com-mcb/v1.0.0-20240802121832-34aec07ae93f.tm.json",
+          "digest": "34aec07ae93f",
+          "timestamp": "20240802121832",
+          "externalID": "{{ID}}"
+        }
+      ]
+    },
+    {
+      "name": "siemens/siemens/5sl6com-mcb-rcm",
+      "schema:manufacturer": {
+        "schema:name": "Siemens"
+      },
+      "schema:mpn": "5SL6COM_MCB_RCM",
+      "schema:author": {
+        "schema:name": "Siemens"
+      },
+      "versions": [
+        {
+          "description": "Please update Powercenter and underlying devices to actual version!",
+          "version": {
+            "model": "1.0.0"
+          },
+          "links": {
+            "content": "siemens/siemens/5sl6com-mcb-rcm/v1.0.0-20240802121832-44882dc553cb.tm.json"
+          },
+          "tmID": "siemens/siemens/5sl6com-mcb-rcm/v1.0.0-20240802121832-44882dc553cb.tm.json",
+          "digest": "44882dc553cb",
+          "timestamp": "20240802121832",
+          "externalID": "{{ID}}"
+        }
+      ]
+    },
+    {
+      "name": "siemens/siemens/5st3com-asfc",
+      "schema:manufacturer": {
+        "schema:name": "Siemens"
+      },
+      "schema:mpn": "5ST3COM_ASFC",
+      "schema:author": {
+        "schema:name": "Siemens"
+      },
+      "versions": [
+        {
+          "description": "Please update Powercenter and underlying devices to actual version!",
+          "version": {
+            "model": "1.0.0"
+          },
+          "links": {
+            "content": "siemens/siemens/5st3com-asfc/v1.0.0-20240802121832-dc49ab3e223d.tm.json"
+          },
+          "tmID": "siemens/siemens/5st3com-asfc/v1.0.0-20240802121832-dc49ab3e223d.tm.json",
+          "digest": "dc49ab3e223d",
+          "timestamp": "20240802121832",
+          "externalID": "{{ID}}"
+        }
+      ]
+    },
+    {
+      "name": "siemens/siemens/5st3com-rca",
+      "schema:manufacturer": {
+        "schema:name": "Siemens"
+      },
+      "schema:mpn": "5ST3COM_RCA",
+      "schema:author": {
+        "schema:name": "Siemens"
+      },
+      "versions": [
+        {
+          "description": "Please update Powercenter and underlying devices to actual version!",
+          "version": {
+            "model": "1.0.0"
+          },
+          "links": {
+            "content": "siemens/siemens/5st3com-rca/v1.0.0-20240802121832-941071515746.tm.json"
+          },
+          "tmID": "siemens/siemens/5st3com-rca/v1.0.0-20240802121832-941071515746.tm.json",
+          "digest": "941071515746",
+          "timestamp": "20240802121832",
+          "externalID": "{{ID}}"
+        }
+      ]
+    },
+    {
+      "name": "siemens/siemens/5st3com-rca-rcdir",
+      "schema:manufacturer": {
+        "schema:name": "Siemens"
+      },
+      "schema:mpn": "5ST3COM_RCA_RCDIR",
+      "schema:author": {
+        "schema:name": "Siemens"
+      },
+      "versions": [
+        {
+          "description": "Please update Powercenter and underlying devices to actual version!",
+          "version": {
+            "model": "1.0.0"
+          },
+          "links": {
+            "content": "siemens/siemens/5st3com-rca-rcdir/v1.0.0-20240802121832-4bdf2ec5be57.tm.json"
+          },
+          "tmID": "siemens/siemens/5st3com-rca-rcdir/v1.0.0-20240802121832-4bdf2ec5be57.tm.json",
+          "digest": "4bdf2ec5be57",
+          "timestamp": "20240802121832",
+          "externalID": "{{ID}}"
+        }
+      ]
+    },
+    {
+      "name": "siemens/siemens/5sv6com-afdd",
+      "schema:manufacturer": {
+        "schema:name": "Siemens"
+      },
+      "schema:mpn": "5SV6COM_AFDD",
+      "schema:author": {
+        "schema:name": "Siemens"
+      },
+      "versions": [
+        {
+          "description": "Please update Powercenter and underlying devices to actual version!",
+          "version": {
+            "model": "1.0.0"
+          },
+          "links": {
+            "content": "siemens/siemens/5sv6com-afdd/v1.0.0-20240802121832-d3e8b5cab3ce.tm.json"
+          },
+          "tmID": "siemens/siemens/5sv6com-afdd/v1.0.0-20240802121832-d3e8b5cab3ce.tm.json",
+          "digest": "d3e8b5cab3ce",
+          "timestamp": "20240802121832",
+          "externalID": "{{ID}}"
+        }
+      ]
+    },
+    {
+      "name": "siemens/siemens/5sv8com-rcm",
+      "schema:manufacturer": {
+        "schema:name": "Siemens"
+      },
+      "schema:mpn": "5SV8COM_RCM",
+      "schema:author": {
+        "schema:name": "Siemens"
+      },
+      "versions": [
+        {
+          "description": "Please update Powercenter and underlying devices to actual version!",
+          "version": {
+            "model": "1.0.0"
+          },
+          "links": {
+            "content": "siemens/siemens/5sv8com-rcm/v1.0.0-20240802121832-f005bfcfc774.tm.json"
+          },
+          "tmID": "siemens/siemens/5sv8com-rcm/v1.0.0-20240802121832-f005bfcfc774.tm.json",
+          "digest": "f005bfcfc774",
+          "timestamp": "20240802121832",
+          "externalID": "{{ID}}"
+        }
+      ]
+    },
+    {
+      "name": "siemens/siemens/5ty-com-ecpd",
+      "schema:manufacturer": {
+        "schema:name": "siemens"
+      },
+      "schema:mpn": "5TY_COM_ECPD",
+      "schema:author": {
+        "schema:name": "siemens"
+      },
+      "versions": [
+        {
+          "description": "Please update Powercenter and underlying devices to actual version!",
+          "version": {
+            "model": "1.0.0"
+          },
+          "links": {
+            "content": "siemens/siemens/5ty-com-ecpd/v1.0.0-20240802121832-4358201e9ee5.tm.json"
+          },
+          "tmID": "siemens/siemens/5ty-com-ecpd/v1.0.0-20240802121832-4358201e9ee5.tm.json",
+          "digest": "4358201e9ee5",
+          "timestamp": "20240802121832",
+          "externalID": "{{ID}}"
+        }
+      ]
+    },
+    {
+      "name": "siemens/siemens/pac3220/http",
+      "schema:manufacturer": {
+        "schema:name": "Siemens"
+      },
+      "schema:mpn": "PAC3220",
+      "schema:author": {
+        "schema:name": "Siemens"
+      },
+      "versions": [
+        {
+          "description": "",
+          "version": {
+            "model": "0.0.1"
+          },
+          "links": {
+            "content": "siemens/siemens/pac3220/http/v0.0.1-20241119163749-c809d889494e.tm.json"
+          },
+          "tmID": "siemens/siemens/pac3220/http/v0.0.1-20241119163749-c809d889494e.tm.json",
+          "digest": "c809d889494e",
+          "timestamp": "20241119163749",
+          "externalID": "{{ID}}"
+        }
+      ]
+    },
+    {
+      "name": "siemens/siemens/poc1000",
+      "schema:manufacturer": {
+        "schema:name": "Siemens"
+      },
+      "schema:mpn": "POC1000",
+      "schema:author": {
+        "schema:name": "Siemens"
+      },
+      "versions": [
+        {
+          "description": "Please update Powercenter and underlying devices to actual version!",
+          "version": {
+            "model": "1.0.0"
+          },
+          "links": {
+            "content": "siemens/siemens/poc1000/v1.0.0-20240802121832-e84fd778f1ea.tm.json"
+          },
+          "tmID": "siemens/siemens/poc1000/v1.0.0-20240802121832-e84fd778f1ea.tm.json",
+          "digest": "e84fd778f1ea",
+          "timestamp": "20240802121832",
+          "externalID": "{{ID}}"
+        }
+      ]
+    }
+  ]
+}

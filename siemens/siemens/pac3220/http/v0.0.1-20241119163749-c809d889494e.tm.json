@@ -1,0 +1,1576 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    {
+      "schema": "https://schema.org/"
+    }
+  ],
+  "@type": "tm:ThingModel",
+  "version": {
+    "model": "0.0.1",
+    "baseline": "0.0"
+  },
+  "title": "Siemens SENTRON PAC3220",
+  "id": "siemens/siemens/pac3220/http/v0.0.1-20241119163749-c809d889494e.tm.json",
+  "name": "PAC3220",
+  "mlfb": "7KM",
+  "base": "http://{{IP}}:{{PORT}}",
+  "security": "nosec_sc",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "schema:license": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+  "schema:copyrightYear": 2024,
+  "schema:copyrightHolder": {
+    "@type": "Organization",
+    "name": "Siemens"
+  },
+    "schema:author": {
+    "schema:name": "Siemens"
+  },
+  "schema:manufacturer": {
+    "schema:name": "Siemens"
+  },
+
+  "schema:mpn": "PAC3220",
+  "properties": {
+    "Frequency": {
+      "description": "Frequency",
+      "units": "Hz",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.FREQ.value"
+        }
+      ]
+    },
+    "VoltageL1-N": {
+      "description": "voltage between L1 and N [V]",
+      "units": "V",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.V_L1.value"
+        }
+      ]
+    },
+	"VoltageL2-N": {
+      "description": "voltage between L2 and N [V]",
+      "units": "V",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.V_L2.value"
+        }
+      ]
+    },
+	"VoltageL3-N": {
+      "description": "voltage between L3 and N [V]",
+      "units": "V",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.V_L3.value"
+        }
+      ]
+    },
+	"VoltageL1-L2": {
+      "description": "voltage between L1 and L2 [V]",
+      "units": "V",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.V_L12.value"
+        }
+      ]
+    },
+	"VoltageL2-L3": {
+      "description": "voltage between L2 and L3 [V]",
+      "units": "V",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.V_L23.value"
+        }
+      ]
+    },
+	"VoltageL3-L1": {
+      "description": "voltage between L3 and L1 [V]",
+      "units": "V",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.V_L31.value"
+        }
+      ]
+    },
+	"CurrentL1": {
+      "description": "current L1 [A]",
+      "units": "A",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.I_L1.value"
+        }
+      ]
+    },
+	"CurrentL2": {
+		"description": "current L1 [A]",
+		"units": "A",
+		"type": "number",
+		"readOnly": true,
+		"forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.I_L2.value"
+        }
+      ]
+    },
+	"CurrentL3": {
+		"description": "current L1 [A]",
+		"units": "A",
+		"type": "number",
+		"readOnly": true,
+		"forms": [
+		{
+		  "href": "/data.json?type=INST",
+		  "op": [
+			"readproperty"
+		  ],
+		  "soris:extract": "$.INST_VALUES.I_L3.value"
+		}
+	  ]
+    },
+    "ApparentPowerL1": {
+      "description": "apparent power L1 [kVA]",
+      "units": "kVA",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.VA_L1.value"
+        }
+      ]
+    },
+	"ApparentPowerL2": {
+      "description": "apparent power L2 [kVA]",
+      "units": "kVA",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.VA_L2.value"
+        }
+      ]
+    },
+	"ApparentPowerL3": {
+      "description": "apparent power L3 [kVA]",
+      "units": "kVA",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.VA_L3.value"
+        }
+      ]
+    },
+    "PowerL1": {
+      "description": "power L1 [kW]",
+      "units": "kW",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.P_L1.value"
+        }
+      ]
+    },
+	"PowerL2": {
+      "description": "power L2 [kW]",
+      "units": "kW",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.P_L2.value"
+        }
+      ]
+    },
+	"PowerL3": {
+      "description": "power L3 [kW]",
+      "units": "kW",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.P_L3.value"
+        }
+      ]
+    },
+    "ReactivePowerL1": {
+      "description": "reactive power L1 [kvar]",
+      "units": "kvar",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.VARQ1_L1.value"
+        }
+      ]
+    },
+	"ReactivePowerL2": {
+      "description": "reactive power L2 [kvar]",
+      "units": "kvar",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.VARQ1_L2.value"
+        }
+      ]
+    },
+	"ReactivePowerL3": {
+      "description": "reactive power L3 [kvar]",
+      "units": "kvar",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.VARQ1_L3.value"
+        }
+      ]
+    },
+    "PowerFactorL1": {
+      "description": "power factor L1 []",
+      "units": "",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.PF_L1.value"
+        }
+      ]
+    },
+	"PowerFactorL2": {
+      "description": "power factor L2 []",
+      "units": "",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.PF_L2.value"
+        }
+      ]
+    },
+	"PowerFactorL3": {
+      "description": "power factor L3 []",
+      "units": "",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.PF_L3.value"
+        }
+      ]
+    },
+    "THDV_L1": {
+      "description": "Total Harmonic Distortion Voltage L1 [%]",
+      "units": "%",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.THDV_L1.value"
+        }
+      ]
+    },
+	"THDV_L2": {
+      "description": "Total Harmonic Distortion Voltage L2 [%]",
+      "units": "%",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.THDV_L2.value"
+        }
+      ]
+    },
+	"THDV_L3": {
+      "description": "Total Harmonic Distortion Voltage L3 [%]",
+      "units": "%",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.THDV_L3.value"
+        }
+      ]
+    },
+    "THDI_L1": {
+      "description": "Total Harmonic Distortion Current L1 [%]",
+      "units": "%",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.THDI_L1.value"
+        }
+      ]
+    },
+	"THDI_L2": {
+      "description": "Total Harmonic Distortion Current L2 [%]",
+      "units": "%",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.THDI_L2.value"
+        }
+      ]
+    },
+	"THDI_L3": {
+      "description": "Total Harmonic Distortion Current L3 [%]",
+      "units": "%",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.THDI_L3.value"
+        }
+      ]
+    },
+    "VoltageLN_AVG": {
+      "description": "average voltage between L and N [V]",
+      "units": "V",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.V_LN_AVG.value"
+        }
+      ]
+    },
+	"VoltageLL_AVG": {
+      "description": "average voltage between L's [V]",
+      "units": "V",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.V_LL_AVG.value"
+        }
+      ]
+    },
+	"Current_AVG": {
+      "description": "average current [A]",
+      "units": "A",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.I_AVG.value"
+        }
+      ]
+    },
+    "ApparentPowerSum ": {
+      "description": "sum apparent power [kVA]",
+      "units": "kVA",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.VA_SUM.value"
+        }
+      ]
+    },
+    "PowerSum": {
+      "description": "sum power [kW]",
+      "units": "kW",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.P_SUM.value"
+        }
+      ]
+    },
+    "ReactivePowerSum": {
+      "description": "sum reactive power [kvar]",
+      "units": "kvar",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.VARQ1_SUM.value"
+        }
+      ]
+    },
+    "PowerFactorSum": {
+      "description": "sum power factor []",
+      "units": "",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.PF_SUM.value"
+        }
+      ]
+    },
+    "VoltageBal": {
+      "description": "amplitude unbalance voltage [%]",
+      "units": "%",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.V_BAL.value"
+        }
+      ]
+    },
+    "CurrentBal": {
+      "description": "amplitude unbalance current [%]",
+      "units": "%",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.I_BAL.value"
+        }
+      ]
+    },
+    "CosPhiL1": {
+      "description": "cosinus phi L1 []",
+      "units": "",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.COS1_L1.value"
+        }
+      ]
+    },
+	"CosPhiL2": {
+      "description": "cosinus phi L2 []",
+      "units": "",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.COS1_L2.value"
+        }
+      ]
+    },
+	"CosPhiL3": {
+      "description": "cosinus phi L3 []",
+      "units": "",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.COS1_L3.value"
+        }
+      ]
+    },
+	"CosPhiSUM": {
+      "description": "sum cosinus phi []",
+      "units": "",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.COS1_SUM.value"
+        }
+      ]
+    },
+	"CurrentNSel": {
+      "description": "curren phase N, depending on setting either calculated or measured by module [A]",
+      "units": "A",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=INST",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.INST_VALUES.COS1_SUM.value"
+        }
+      ]
+    },
+    	"Counter.ACTIVE_ENERGY.IMPORT.T1.total": {
+      "description": "Counter ACTIVE_ENERGY.IMPORT.T1.total",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.IMPORT.T1.total"
+        }
+      ]
+    },
+	"Counter.ACTIVE_ENERGY.IMPORT.T1.L1": {
+      "description": "Counter .ACTIVE_ENERGY.IMPORT.T1.L1 [kWh]",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.IMPORT.T1.L1"
+        }
+      ]
+    },
+	"Counter.ACTIVE_ENERGY.IMPORT.T1.L2": {
+      "description": "Counter ACTIVE_ENERGY.IMPORT.T1.L2[kWh]",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.IMPORT.T1.L2"
+        }
+      ]
+    },
+	"Counter.ACTIVE_ENERGY.IMPORT.T1.L3": {
+      "description": "Counter ACTIVE_ENERGY.IMPORT.T1.L3 [kWh]",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.IMPORT.T1.L3"
+        }
+      ]
+    },
+	"Counter.ACTIVE_ENERGY.IMPORT.T2.total": {
+      "description": "Counter ACTIVE_ENERGY.IMPORT.T2.total [kWh]",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.IMPORT.T2.total"
+        }
+      ]
+    },
+	"Counter.ACTIVE_ENERGY.IMPORT.T2.L1": {
+      "description": "Counter ACTIVE_ENERGY.IMPORT.T2.L1 [kWh]",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.IMPORT.T2.L1"
+        }
+      ]
+    },
+	"Counter.ACTIVE_ENERGY.IMPORT.T2.L2": {
+      "description": "Counter ACTIVE_ENERGY.IMPORT.T2.L2 [kWh]",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.IMPORT.T2.L2"
+        }
+      ]
+    },
+	"Counter.ACTIVE_ENERGY.IMPORT.T2.L3": {
+      "description": "Counter ACTIVE_ENERGY.IMPORT.T2.L3 [kWh]",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.IMPORT.T2.L3"
+        }
+      ]
+    },
+	"Counter.ACTIVE_ENERGY.IMPORT.TOTAL.primary": {
+      "description": "Counter ACTIVE_ENERGY.IMPORT.TOTAL.primary [kWh]",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.IMPORT.TOTAL.primary"
+        }
+      ]
+    },
+	"Counter.ACTIVE_ENERGY.IMPORT.TOTAL.secondary": {
+      "description": "Counter ACTIVE_ENERGY.IMPORT.TOTAL.secondary [kWh]",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.IMPORT.TOTAL.secondary"
+        }
+      ]
+    },
+	"Counter.ACTIVE_ENERGY.EXPORT.T1.total": {
+      "description": "Counter ACTIVE_ENERGY.EXPORT.T1.total [kWh]",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.EXPORT.T1.total"
+        }
+      ]
+    },
+	"Counter.ACTIVE_ENERGY.EXPORT.T1.L1": {
+      "description": "Counter ACTIVE_ENERGY.EXPORT.T1.L1 [kWh]",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.EXPORT.T1.L1"
+        }
+      ]
+    },
+	"Counter.ACTIVE_ENERGY.EXPORT.T1.L2": {
+      "description": "Counter ACTIVE_ENERGY.EXPORT.T1.L2 [kWh]",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.EXPORT.T1.L2"
+        }
+      ]
+    },
+	"Counter.ACTIVE_ENERGY.EXPORT.T1.L3": {
+      "description": "Counter ACTIVE_ENERGY.EXPORT.T1.L3 [kWh]",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.EXPORT.T1.L3"
+        }
+      ]
+    },
+	"Counter.ACTIVE_ENERGY.EXPORT.T2.total": {
+      "description": "Counter ACTIVE_ENERGY.EXPORT.T2.total [kWh]",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.EXPORT.T2.total"
+        }
+      ]
+    },
+	"Counter.ACTIVE_ENERGY.EXPORT.T2.L1": {
+      "description": "Counter ACTIVE_ENERGY.EXPORT.T2.L1 [kWh]",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.EXPORT.T2.L1"
+        }
+      ]
+    },
+	"Counter.ACTIVE_ENERGY.EXPORT.T2.L2": {
+      "description": "Counter ACTIVE_ENERGY.EXPORT.T2.L2 [kWh]",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.EXPORT.T2.L2"
+        }
+      ]
+    },
+	"Counter.ACTIVE_ENERGY.EXPORT.T2.L3": {
+      "description": "Counter ACTIVE_ENERGY.EXPORT.T2.L3 [kWh]",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.EXPORT.T2.L3"
+        }
+      ]
+    },
+	"Counter.ACTIVE_ENERGY.EXPORT.TOTAL.primary": {
+      "description": "Counter ACTIVE_ENERGY.EXPORT.TOTAL.primary [kWh]",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.EXPORT.TOTAL.primary"
+        }
+      ]
+    },
+	"Counter.ACTIVE_ENERGY.EXPORT.TOTAL.secondary": {
+      "description": "Counter ACTIVE_ENERGY.EXPORT.TOTAL.secondary [kWh]",
+      "units": "kWh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.ACTIVE_ENERGY.EXPORT.TOTAL.secondary"
+        }
+      ]
+    },
+
+	"Counter.REACTIVE_ENERGY.IMPORT.T1.total": {
+      "description": "Counter REACTIVE_ENERGY.IMPORT.T1.total [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.IMPORT.T1.total"
+        }
+      ]
+    },
+	"Counter.REACTIVE_ENERGY.IMPORT.T1.L1": {
+      "description": "Counter REACTIVE_ENERGY.IMPORT.T1.L1 [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.IMPORT.T1.L1"
+        }
+      ]
+    },
+	"Counter.REACTIVE_ENERGY.IMPORT.T1.L2": {
+      "description": "Counter REACTIVE_ENERGY.IMPORT.T1.L2 [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.IMPORT.T1.L2"
+        }
+      ]
+    },
+	"Counter.REACTIVE_ENERGY.IMPORT.T1.L3": {
+      "description": "Counter REACTIVE_ENERGY.IMPORT.T1.L3 [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.IMPORT.T1.L3"
+        }
+      ]
+    },
+	"Counter.REACTIVE_ENERGY.IMPORT.T2.total": {
+      "description": "Counter REACTIVE_ENERGY.IMPORT.T2.total [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.IMPORT.T2.total"
+        }
+      ]
+    },
+	"Counter.REACTIVE_ENERGY.IMPORT.T2.L1": {
+      "description": "Counter REACTIVE_ENERGY.IMPORT.T2.L1 [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.IMPORT.T2.L1"
+        }
+      ]
+    },
+	"Counter.REACTIVE_ENERGY.IMPORT.T2.L2": {
+      "description": "Counter REACTIVE_ENERGY.IMPORT.T2.L2 [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.IMPORT.T2.L2"
+        }
+      ]
+    },
+	"Counter.REACTIVE_ENERGY.IMPORT.T2.L3": {
+      "description": "Counter REACTIVE_ENERGY.IMPORT.T2.L3 [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.IMPORT.T2.L3"
+        }
+      ]
+    },
+	"Counter.REACTIVE_ENERGY.IMPORT.TOTAL.primary": {
+      "description": "Counter REACTIVE_ENERGY.IMPORT.TOTAL.primary [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.IMPORT.TOTAL.primary"
+        }
+      ]
+    },
+	"Counter.REACTIVE_ENERGY.IMPORT.TOTAL.secondary": {
+      "description": "Counter REACTIVE_ENERGY.IMPORT.TOTAL.secondary [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.IMPORT.TOTAL.secondary"
+        }
+      ]
+    },
+	"Counter.REACTIVE_ENERGY.EXPORT.T1.total": {
+      "description": "Counter REACTIVE_ENERGY.EXPORT.T1.total [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.EXPORT.T1.total"
+        }
+      ]
+    },
+	"Counter.REACTIVE_ENERGY.EXPORT.T1.L1": {
+      "description": "Counter REACTIVE_ENERGY.EXPORT.T1.L1 [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.EXPORT.T1.L1"
+        }
+      ]
+    },
+	"Counter.REACTIVE_ENERGY.EXPORT.T1.L2": {
+      "description": "Counter REACTIVE_ENERGY.EXPORT.T1.L2 [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.EXPORT.T1.L2"
+        }
+      ]
+    },
+	"Counter.REACTIVE_ENERGY.EXPORT.T1.L3": {
+      "description": "Counter REACTIVE_ENERGY.EXPORT.T1.L3 [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.EXPORT.T1.L3"
+        }
+      ]
+    },
+	"Counter.REACTIVE_ENERGY.EXPORT.T2.total": {
+      "description": "Counter REACTIVE_ENERGY.EXPORT.T2.total [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.EXPORT.T2.total"
+        }
+      ]
+    },
+	"Counter.REACTIVE_ENERGY.EXPORT.T2.L1": {
+      "description": "Counter REACTIVE_ENERGY.EXPORT.T2.L1 [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.EXPORT.T2.L1"
+        }
+      ]
+    },
+	"Counter.REACTIVE_ENERGY.EXPORT.T2.L2": {
+      "description": "Counter REACTIVE_ENERGY.EXPORT.T2.L2 [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.EXPORT.T2.L2"
+        }
+      ]
+    },
+	"Counter.REACTIVE_ENERGY.EXPORT.T2.L3": {
+      "description": "Counter REACTIVE_ENERGY.EXPORT.T2.L3 [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.EXPORT.T2.L3"
+        }
+      ]
+    },
+	"Counter.REACTIVE_ENERGY.EXPORT.TOTAL.primary": {
+      "description": "Counter REACTIVE_ENERGY.EXPORT.TOTAL.primary [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.EXPORT.TOTAL.primary"
+        }
+      ]
+    },
+	"Counter.REACTIVE_ENERGY.EXPORT.TOTAL.secondary": {
+      "description": "Counter REACTIVE_ENERGY.EXPORT.TOTAL.secondary [kvarh]",
+      "units": "kvarh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.REACTIVE_ENERGY.EXPORT.TOTAL.secondary"
+        }
+      ]
+    },
+
+	"Counter.APPARENT_ENERGY.NET.T1.total": {
+      "description": "Counter APPARENT_ENERGY.NET.T1.total [kVAh]",
+      "units": "kVAh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.APPARENT_ENERGY.NET.T1.total"
+        }
+      ]
+    },
+	"Counter.APPARENT_ENERGY.NET.T1.L1": {
+      "description": "Counter APPARENT_ENERGY.NET.T1.L1 [kVAh]",
+      "units": "kVAh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.APPARENT_ENERGY.NET.T1.L1"
+        }
+      ]
+    },
+	"Counter.APPARENT_ENERGY.NET.T1.L2": {
+      "description": "Counter APPARENT_ENERGY.NET.T1.L2[kVAh]",
+      "units": "kVAh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.APPARENT_ENERGY.NET.T1.L2"
+        }
+      ]
+    },
+	"Counter.APPARENT_ENERGY.NET.T1.L3": {
+      "description": "Counter APPARENT_ENERGY.NET.T1.L3 [kVAh]",
+      "units": "kVAh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.APPARENT_ENERGY.NET.T1.L3"
+        }
+      ]
+    },
+	"Counter.APPARENT_ENERGY.NET.T2.total": {
+      "description": "Counter APPARENT_ENERGY.NET.T2.total [kVAh]",
+      "units": "kVAh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.APPARENT_ENERGY.NET.T2.total"
+        }
+      ]
+    },
+	"Counter.APPARENT_ENERGY.NET.T2.L1": {
+      "description": "Counter APPARENT_ENERGY.NET.T2.L1 [kVAh]",
+      "units": "kVAh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.APPARENT_ENERGY.NET.T2.L1"
+        }
+      ]
+    },
+	"Counter.APPARENT_ENERGY.NET.T2.L2": {
+      "description": "Counter APPARENT_ENERGY.NET.T2.L2 [kVAh]",
+      "units": "kVAh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.APPARENT_ENERGY.NET.T2.L2"
+        }
+      ]
+    },
+	"Counter.APPARENT_ENERGY.NET.T2.L3": {
+      "description": "Counter APPARENT_ENERGY.NET.T2.L3 [kVAh]",
+      "units": "kVAh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.APPARENT_ENERGY.NET.T2.L3"
+        }
+      ]
+    },
+	"Counter.APPARENT_ENERGY.NET.TOTAL.primary": {
+      "description": "Counter APPARENT_ENERGY.NET.TOTAL.primary [kVAh]",
+      "units": "kVAh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.APPARENT_ENERGY.NET.TOTAL.primary"
+        }
+      ]
+    },
+	"Counter.APPARENT_ENERGY.NET.TOTAL.secondary": {
+      "description": "Counter APPARENT_ENERGY.NET.TOTAL.secondary [kVAh]",
+      "units": "kVAh",
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=COUNTER",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.COUNTER.APPARENT_ENERGY.NET.TOTAL.secondary"
+        }
+      ]
+    },
+    "PRODUCT_INFO.name": {
+      "description": "PRODUCT_INFO name",
+      "type": "string",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=PRODUCT_INFO",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.PRODUCT_INFO.name"
+        }
+      ]
+    },
+	"PRODUCT_INFO.orderId": {
+      "description": "PRODUCT_INFO orderId",
+      "type": "string",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=PRODUCT_INFO",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.PRODUCT_INFO.orderId"
+        }
+      ]
+    },
+	"PRODUCT_INFO.DT": {
+      "description": "PRODUCT_INFO DT",
+      "type": "string",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=PRODUCT_INFO",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.PRODUCT_INFO.DT"
+        }
+      ]
+    },
+	"PRODUCT_INFO.ES": {
+      "description": "PRODUCT_INFO ES",
+      "type": "string",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=PRODUCT_INFO",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.PRODUCT_INFO.ES"
+        }
+      ]
+    },
+"PRODUCT_INFO.serial": {
+      "description": "PRODUCT_INFO serial",
+      "type": "string",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=PRODUCT_INFO",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.PRODUCT_INFO.serial"
+        }
+      ]
+    },
+"PRODUCT_INFO.FW": {
+      "description": "PRODUCT_INFO FW",
+      "type": "string",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=PRODUCT_INFO",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.PRODUCT_INFO.FW"
+        }
+      ]
+    },
+	"DEVICE_INFO.AKZ": {
+      "description": "DEVICE_INFO AKZ",
+      "type": "string",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=DEVICE_INFO",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.DEVICE_INFO.AKZ"
+        }
+      ]
+    },
+"DEVICE_INFO.OKZ": {
+      "description": "DEVICE_INFO OKZ",
+      "type": "string",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=DEVICE_INFO",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.DEVICE_INFO.OKZ"
+        }
+      ]
+    },
+	"DEVICE_INFO.INSTALLATION_DATE": {
+      "description": "DEVICE_INFO INSTALLATION_DATE",
+      "type": "string",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=DEVICE_INFO",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.DEVICE_INFO.INSTALLATION_DATE"
+        }
+      ]
+    },
+	"DEVICE_INFO.DESCRIPTOR": {
+      "description": "DEVICE_INFO DESCRIPTOR",
+      "type": "string",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=DEVICE_INFO",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.DEVICE_INFO.DESCRIPTOR"
+        }
+      ]
+    },
+"DEVICE_INFO.SIGNATURE": {
+      "description": "DEVICE_INFO SIGNATURE",
+      "type": "string",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "/data.json?type=DEVICE_INFO",
+          "op": [
+            "readproperty"
+          ],
+          "soris:extract": "$.DEVICE_INFO.SIGNATURE"
+        }
+      ]
+    }
+  }
+,"links":[{"href":"{{ID}}","rel":"original"}]}
