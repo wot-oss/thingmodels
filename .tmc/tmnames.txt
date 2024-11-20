@@ -9,5 +9,4 @@ siemens/siemens/5st3com-rca-rcdir
 siemens/siemens/5sv6com-afdd
 siemens/siemens/5sv8com-rcm
 siemens/siemens/5ty-com-ecpd
-siemens/siemens/pac3220/http
 siemens/siemens/poc1000

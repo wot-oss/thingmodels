@@ -279,31 +279,6 @@
       ]
     },
     {
-      "name": "siemens/siemens/pac3220/http",
-      "schema:manufacturer": {
-        "schema:name": "Siemens"
-      },
-      "schema:mpn": "PAC3220",
-      "schema:author": {
-        "schema:name": "Siemens"
-      },
-      "versions": [
-        {
-          "description": "",
-          "version": {
-            "model": "0.0.1"
-          },
-          "links": {
-            "content": "siemens/siemens/pac3220/http/v0.0.1-20241119163749-c809d889494e.tm.json"
-          },
-          "tmID": "siemens/siemens/pac3220/http/v0.0.1-20241119163749-c809d889494e.tm.json",
-          "digest": "c809d889494e",
-          "timestamp": "20241119163749",
-          "externalID": "{{ID}}"
-        }
-      ]
-    },
-    {
       "name": "siemens/siemens/poc1000",
       "schema:manufacturer": {
         "schema:name": "Siemens"
