@@ -1,6 +1,6 @@
 # Thing Model Catalog Repository
 
-This repository holds Thing Models for Siemens devices published by Siemens for public use.
+This repository holds [Thing Models][2] for Siemens devices published by Siemens for public use.
 
 ## Usage
 
@@ -19,4 +19,4 @@ Other organizations are expected to create their own repositories with Thing Mod
 
 
 [1]: https://github.com/wot-oss/tmc/
-
+[2]: https://www.w3.org/TR/wot-thing-description11/
